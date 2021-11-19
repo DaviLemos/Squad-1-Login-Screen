@@ -1,10 +1,13 @@
-import React from "react";
+import React, {useState} from "react";
 import { Button, Text } from "../Components/Buttons/ButtonContinue";
 import { Form } from "../Components/Forms/Forms";
 import { InputPass, InputText, DivContainerText, DivContainerPass } from "../Components/Inputs/InputBase";
 import { User, Lock } from 'react-feather';
 import { Titulo } from "../Components/Titulo/Titulo";
+    
 
+    const [usuario, setUsuario] = useState("")
+    const [senha, setSenha] = useState("")
 
 function Login(){
 
@@ -19,6 +22,11 @@ function Login(){
         <InputText
           placeholder="Usuário"
           required
+          value={usuario}
+
+          onChange={(event) => {
+            setUsuario(event.target.value);
+        }}
         />
         <User
           color="#E0E0E0"
@@ -31,6 +39,7 @@ function Login(){
         <InputPass
           placeholder="Senha"
           required
+          value={senha}
         />
         <Lock
           color="#E0E0E0"
