@@ -1,5 +1,9 @@
+import Login from "./Screens/login";
+
 function App() {
-  return <div></div>;
+  return (
+    <Login />
+  )
 }
 
 export default App;
