@@ -25,7 +25,6 @@ function Login() {
     onSubmit: (values) => {
       setUsuario(values.usuario);
       setSenha(values.senha);
-      console.log(usuario, senha);
     },
   });
 
