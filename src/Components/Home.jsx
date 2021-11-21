@@ -1,0 +1,11 @@
+import styled from 'styled-components';
+
+const Home = styled.div`
+    position: relative;
+    width: 1920px;
+    height: 1080px;
+    background: linear-gradient(180deg, #33383D 0%, #1C1D20 100%);
+    box-shadow: 4px 4px 70px rgba(0, 0, 0, 0.25);
+`;
+
+export default Home;
