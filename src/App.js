@@ -1,9 +1,7 @@
-import Login from "./Screens/login";
+import HorarioEDataAtual from './Components/HorarioEDataAtual/HorarioEDataAtual';
 
 function App() {
-  return (
-    <Login />
-  )
+  return <HorarioEDataAtual />;
 }
 
 export default App;
