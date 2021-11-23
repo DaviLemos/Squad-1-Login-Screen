@@ -4,7 +4,7 @@ import getMesPT from '../helper/getmes.helper';
 import { StyleParagraph } from './HorarioEDataAtual-style';
 
 const HorarioEDataAtual = () => {
-  const data = new Date();
+  const [data, setData] = React.useState(new Date());
   const horarioEData = {
     hora: `${data.getHours()}:${
       data.getMinutes() < 10 ? `0${data.getMinutes()}` : data.getMinutes()
@@ -17,6 +17,13 @@ const HorarioEDataAtual = () => {
     year: data.getFullYear(),
   };
 
+  React.useEffect(() => {
+    const interval = setInterval(() => {
+      setData(new Date());
+    }, 1000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div>
       <StyleParagraph
@@ -26,7 +33,11 @@ const HorarioEDataAtual = () => {
         weight="700"
         margin="0"
       >
-        {horarioEData.hora}
+        {`${new Date().getHours()}:${
+          new Date().getMinutes() < 10
+            ? `0${new Date().getMinutes()}`
+            : new Date().getMinutes()
+        }`}
       </StyleParagraph>
       <StyleParagraph
         ftWeight="normal"
