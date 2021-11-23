@@ -5,9 +5,10 @@ import { StyleParagraph } from './HorarioEDataAtual-style';
 
 const HorarioEDataAtual = () => {
   const data = new Date();
-  // Objeto que agrupa os dados relacionados a data e hora atuais
   const horarioEData = {
-    hora: `${data.getHours()}:${data.getMinutes()}`,
+    hora: `${data.getHours()}:${
+      data.getMinutes() < 10 ? `0${data.getMinutes()}` : data.getMinutes()
+    }`,
     day: data.getDay(),
     diaNumerico: data.getDate(),
     mes: `${
@@ -32,7 +33,7 @@ const HorarioEDataAtual = () => {
         ftSize="14px"
         lnHeight="18px"
         weight="400"
-        margin="-40px 0"
+        margin="-40px"
       >{`${getDayPT(horarioEData.day)}, ${
         horarioEData.diaNumerico
       } de ${getMesPT(horarioEData.mes)} de ${
