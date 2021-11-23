@@ -1,12 +1,8 @@
-import React from 'react'; 
-import BaseLogin from './Pages/BaseLogin'
+import React, { Fragment } from 'react';
+import Login from './Screens/login';
 
 function App() {
-  return (
-  <div>
-    <BaseLogin/>
-  </div>
-  );
+  return <Login />;
 }
 
 export default App;
