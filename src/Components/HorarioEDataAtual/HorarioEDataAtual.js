@@ -32,6 +32,7 @@ const HorarioEDataAtual = () => {
         lnHeight="183px"
         weight="700"
         margin="0"
+        data-testid="hora"
       >
         {`${new Date().getHours()}:${
           new Date().getMinutes() < 10
@@ -45,6 +46,7 @@ const HorarioEDataAtual = () => {
         lnHeight="18px"
         weight="400"
         margin="-40px"
+        data-testid="data"
       >{`${getDayPT(horarioEData.day)}, ${
         horarioEData.diaNumerico
       } de ${getMesPT(horarioEData.mes)} de ${
