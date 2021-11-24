@@ -11,13 +11,16 @@ import { ButtonLogout, TextLogout } from "../Components/Buttons/ButtomLogout";
 import { ButtonContNav, TextContNav } from "../Components/Buttons/ButtonContNav";
 import { DivPagina } from "../Components/DivPagina/DivPagina";
 import { BarraDiv } from "../Components/Logos/Barra";
-
+import HorarioEDataAtual from "../Components/HorarioEDataAtual/HorarioEDataAtual";
+import  Weather from "../Components/Weather/Weather";
 function Home() {
 
     return (
         <DivPagina>
             <PrimeiraDiv>
                 <LogoSuperior src={LogoCompasso1} alt="Logo Compasso Superior" />
+                <HorarioEDataAtual/>
+                <Weather/>
             </PrimeiraDiv>
             <SegundaDiv>
                 <LogoBola src={bolaLogoCompasso1} alt="Logo Compasso" />
