@@ -39,39 +39,39 @@ class User {
     ];
     const values = [data.email, data.password, data.email, data.password];
     if (this._sqlValidation(data.email)) {
-      res.status(400).send({
+      res.status(400).json({
         auth: false,
-        message: 'Invalid Caracter Email',
+        message: 'caracter inválido no email',
       });
     } else if (this._sqlValidation(data.password)) {
-      res.status(400).send({
+      res.status(400).json({
         auth: false,
-        message: 'Invalid Caracter Password',
+        message: 'caracter inválido na senha',
       });
     } else {
-      connection.query(sql.join(' ; '), values, function (err, results) {
+      connection.query(sql.join(';'), values, function (err, results) {
         if (err) {
-          res.status(400).send({
+          res.status(400).json({
             auth: false,
-            message: 'Failed to Process Request',
+            message: 'Falha da Requisição do Processo',
           });
         } else {
           if (results[0].length === 0) {
             if (results[1].length === 0 && results[2].length === 0) {
-              res.status(400).send({
+              res.status(400).json({
                 auth: false,
-                message: 'Invalid Email and Password',
+                message: 'usuário e senha inválidos',
               });
             } else {
               if (results[1].length === 0) {
-                res.status(400).send({
+                res.status(400).json({
                   auth: false,
-                  message: 'Invalid Email',
+                  message: 'usuáro inválido',
                 });
               } else {
-                res.status(400).send({
+                res.status(400).json({
                   auth: false,
-                  message: 'Invalid Password',
+                  message: 'senha inválido',
                 });
               }
             }
@@ -81,8 +81,8 @@ class User {
             };
             res.status(200).json({
               auth: true,
-              message: 'User Successfully Logged',
-              token: jwt.sign(data_token, 'PRIVATEKEY', { expiresIn: 600 }),
+              message: 'usuário logado com sucesso',
+              token: jwt.sign(data_token, 'PRIVATEKEY', { expiresIn: 300 }),
             });
           }
         }
