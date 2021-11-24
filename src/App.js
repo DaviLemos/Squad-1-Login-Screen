@@ -1,5 +1,4 @@
-
-import Login from './Screens/login';
+import Login from './Screens/Login';
 
 function App() {
   return <Login />;

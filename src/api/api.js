@@ -10,7 +10,8 @@ export const userLogin = (userData) => {
     .catch(function (error) {
       return error.response.data;
     });
-  
+};
+
 export const getWeather = async (lat, long) => {
   let res = await axios.get('http://api.openweathermap.org/data/2.5/weather', {
     params: {
@@ -21,6 +22,5 @@ export const getWeather = async (lat, long) => {
       units: 'metric',
     },
   });
-  console.log(res.data);
   return res.data;
 };
