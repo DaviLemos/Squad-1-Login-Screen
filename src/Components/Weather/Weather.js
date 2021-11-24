@@ -34,9 +34,10 @@ const Weather = () => {
               name="owm"
               style={{
                 color: '#454545',
-                fontSize: '27px',
+                fontSize: '24px',
                 marginTop: 'auto',
                 marginBottom: 'auto',
+                paddingLeft:'15px'
               }}
             />
             <WeatherTemperature data-testid="temperature">
