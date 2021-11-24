@@ -20,6 +20,8 @@ import { User, Lock } from 'react-feather';
 import { Titulo } from '../Components/Titulo/Titulo';
 import { useFormik } from 'formik';
 import validate from '../helper/validate.helper';
+//* APi * //
+import { userLogin } from '../api/api';
 
 function Login() {
   const [usuario, setUsuario] = React.useState('');
@@ -34,8 +36,21 @@ function Login() {
     onSubmit: (values) => {
       setUsuario(values.usuario);
       setSenha(values.senha);
+      handleLogin(values);
     },
   });
+
+  const handleLogin = (values) => {
+    userLogin({ email: values.usuario, password: values.senha }).then(function (
+      data
+    ) {
+      if (data.auth) {
+        // Quando loga com sucesso
+      } else {
+        // Quando tem algum erro na hora de logar
+      }
+    });
+  };
 
   return (
     <Container>

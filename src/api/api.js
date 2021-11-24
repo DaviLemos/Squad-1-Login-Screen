@@ -1,5 +1,17 @@
 import axios from 'axios';
 
+export const userLogin = (userData) => {
+  return axios
+    .post('http://localhost:3333/login', userData)
+    .then(function (res) {
+      let data = res.data;
+      return data;
+    })
+    .catch(function (error) {
+      return error.response.data;
+    });
+};
+
 export const getWeather = async (lat, long) => {
   let res = await axios.get('http://api.openweathermap.org/data/2.5/weather', {
     params: {
@@ -10,6 +22,5 @@ export const getWeather = async (lat, long) => {
       units: 'metric',
     },
   });
-  console.log(res.data);
   return res.data;
 };
