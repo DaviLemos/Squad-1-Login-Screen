@@ -5,8 +5,6 @@ const ContentContainer = styled.div`
   height: 80%;
 
   display: flex;
-  /* justify-content: center; */
-  /* align-items: center; */
   flex-direction: column;
 `;
 
