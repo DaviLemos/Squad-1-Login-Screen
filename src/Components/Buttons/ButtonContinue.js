@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { widths } from '../UI/variaveis';
 
 export const Button = styled.button.attrs({ type: 'submit' })`
   /* position: absolute; */
@@ -13,6 +14,11 @@ export const Button = styled.button.attrs({ type: 'submit' })`
   border: none;
   border-radius: 50px;
   cursor: pointer;
+
+  @media (max-width: ${widths.sm}) {
+    width: 100%;
+    margin-bottom: 15%;
+  }
 `;
 
 export const Text = styled.p`

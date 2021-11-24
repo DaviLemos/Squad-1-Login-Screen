@@ -1,11 +1,7 @@
 import styled from 'styled-components';
+import { widths } from '../UI/variaveis';
 
 const Saudacao = styled.h1`
-  /* position: absolute; */
-  /* width: 118px;
-  height: 76px;
-  left: 287px;
-  top: 197px; */
   margin-top: 40%;
 
   font-style: normal;
@@ -20,6 +16,12 @@ const Saudacao = styled.h1`
 
   margin-right: auto;
   margin-bottom: 0;
+
+  @media (max-width: ${widths.sm}) {
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+  }
 `;
 
 export default Saudacao;

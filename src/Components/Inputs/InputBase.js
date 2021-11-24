@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { widths } from '../UI/variaveis';
 
 export const InputText = styled.input.attrs({ type: 'email' })`
   width: 310px;
@@ -18,18 +19,6 @@ export const InputText = styled.input.attrs({ type: 'email' })`
   &:focus {
     outline: none;
   }
-`;
-export const DivContainerText = styled.div`
-  /* position: absolute; */
-  width: 377px;
-  height: 58px;
-  left: 285px;
-  top: 547px;
-  display: flex;
-  text-align: center;
-  margin-bottom: 33px;
-  border: 1px solid #ffffff;
-  border-radius: 50px;
 `;
 
 export const InputPass = styled.input.attrs({ type: 'password' })`
@@ -51,15 +40,37 @@ export const InputPass = styled.input.attrs({ type: 'password' })`
     outline: none;
   }
 `;
-export const DivContainerPass = styled.div`
-  /* position: absolute; */
+
+export const DivContainerText = styled.div`
   width: 377px;
   height: 58px;
-  left: 285px;
-  top: 640px;
+
+  display: flex;
+  text-align: center;
+  margin-bottom: 33px;
+  border: 1px solid #ffffff;
+  border-radius: 50px;
+  @media (max-width: ${widths.sm}) {
+    width: 100%;
+    svg {
+      margin-right: 5%;
+    }
+  }
+`;
+
+export const DivContainerPass = styled.div`
+  width: 377px;
+  height: 58px;
+
   display: flex;
   text-align: center;
   margin-bottom: 50px;
   border: 1px solid #ffffff;
   border-radius: 50px;
+  @media (max-width: ${widths.sm}) {
+    width: 100%;
+    svg {
+      margin-right: 5%;
+    }
+  }
 `;
