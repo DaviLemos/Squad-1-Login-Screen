@@ -1,28 +1,25 @@
-import styled from "styled-components";
-
+import styled from 'styled-components';
 
 export const InputText = styled.input.attrs({ type: 'email' })`
+  width: 310px;
+  border-radius: 50px;
+  color: #e0e0e0;
+  padding-left: 20px;
+  border: none;
 
-width: 310px;
-border-radius: 50px;
-color: #E0E0E0;
-padding-left: 20px;
-border: none;
-
-::placeholder{
-    color: #E0E0E0;
+  ::placeholder {
+    color: #e0e0e0;
     font-size: 16px;
     font-family: Mark Pro;
     font-style: normal;
     font-weight: normal;
-}
-&:focus {
+  }
+  &:focus {
     outline: none;
   }
-
-`
+`;
 export const DivContainerText = styled.div`
-position: absolute;
+  position: absolute;
   width: 377px;
   height: 58px;
   left: 285px;
@@ -30,33 +27,30 @@ position: absolute;
   display: flex;
   text-align: center;
   margin-bottom: 33px;
-  border: 1px solid #FFFFFF;
+  border: 1px solid #ffffff;
   border-radius: 50px;
-
-`
-
+`;
 
 export const InputPass = styled.input.attrs({ type: 'password' })`
+  width: 310px;
+  border-radius: 50px;
+  color: #e0e0e0;
+  padding-left: 20px;
+  border: none;
 
-width: 310px;
-border-radius: 50px;
-color: #E0E0E0;
-padding-left: 20px;
-border: none;
-
-::placeholder{
-    color: #E0E0E0;
+  ::placeholder {
+    color: #e0e0e0;
     font-size: 16px;
     font-family: Mark Pro;
     font-style: normal;
     font-weight: normal;
-}
-&:focus {
+  }
+  &:focus {
     outline: none;
   }
-`
+`;
 export const DivContainerPass = styled.div`
-position: absolute;
+  position: absolute;
   width: 377px;
   height: 58px;
   left: 285px;
@@ -64,7 +58,6 @@ position: absolute;
   display: flex;
   text-align: center;
   margin-bottom: 33px;
-  border: 1px solid #FFFFFF;
+  border: 1px solid #ffffff;
   border-radius: 50px;
-  `
-
+`;
