@@ -22,11 +22,9 @@ import { useFormik } from 'formik';
 import validate from '../helper/validate.helper';
 //* APi * //
 import { userLogin } from '../api/api';
+import { Link } from 'react-router-dom';
 
 function Login() {
-  const [usuario, setUsuario] = React.useState('');
-  const [senha, setSenha] = React.useState('');
-
   const formik = useFormik({
     initialValues: {
       usuario: '',
@@ -34,15 +32,13 @@ function Login() {
     },
     validate,
     onSubmit: (values) => {
-      setUsuario(values.usuario);
-      setSenha(values.senha);
       handleLogin(values);
     },
   });
 
   const handleLogin = (values) => {
     userLogin({ email: values.usuario, password: values.senha }).then(function (
-      data
+      data,
     ) {
       if (data.auth) {
         // Quando loga com sucesso
@@ -113,7 +109,9 @@ function Login() {
                 formik.errors.senha}
             </div>
             <Button>
-              <Text>Continuar</Text>
+              <Link to="/home">
+                <Text>Continuar</Text>
+              </Link>
             </Button>
           </Form>
         </ContentContainer>
