@@ -1,58 +1,40 @@
 import styled from "styled-components"
 
 export const Footer = styled.div`
-position: absolute;
-width: 1920px;
-height: 100px;
-left: 0px;
-bottom: 0;
-top: 981px;
-
+position:relative;
+display:flex;
+width: 100%;
+height: 56px;
 Background: linear-gradient(90.16deg, #33383D 0%, #1C1D20 100%);
+margin-top: -50px
 `
 
 export const TextFoo = styled.p` 
-position: absolute;
-width: 541px;
-height: 58px;
-left: 354px;
-top: 30px;
+width: 270px;
+height: 40px;
+margin-top: 17px;
+padding-left: 200px;
 
 font-family: Mark Pro;
 font-style: normal;
 font-weight: normal;
-font-size: 12px;
-line-height: 15px;
+font-size: 6px;
+line-height: 10px;
 text-align: right;
-
 color: #FFFFFF;
 `
 export const TextRefr = styled.p`
 
-position: absolute;
-width: 109px;
-height: 49px;
-left: 1053px;
-top: 28px;
+width: 60px;
+padding-left: 100px;
+margin-top: 15px;
+
 
 font-family: Mark Pro;
 font-style: normal;
 font-weight: normal;
-font-size: 14px;
-line-height: 18px;
+font-size: 8px;
+line-height: 12px;
 text-align: right;
-
 color: #FFFFFF;
-`
-
-export const DivLine = styled.div`
-position: absolute;
-width: 61px;
-height: 0px;
-left: 930px;
-top: 50px;
-
-border: 1px solid #FFFFFF;
-transform: rotate(90deg);
-
 `

@@ -2,28 +2,22 @@ import styled from "styled-components";
 
 export const ButtonContNav = styled.button.attrs({ type: 'submit' })`
 
-position: absolute;
-width: 131px;
-height: 100px;
-left: 1661px;
-margin: 0;
+width: 80px;
+height: 56px;
 border: none;
-padding: 0;
-background-color: #FFFFFF;
+background-color:  #ffffff;
 cursor: pointer;
 `
 
 export const TextContNav = styled.p` 
 
-width: 95.49px;
-height: 28.56px;
-padding: 0 16px;
 
 font-family: Mark Pro;
 font-style: normal;
 font-weight: normal;
-font-size: 12px;
-line-height: 15px;
+font-size: 10px;
+margin-top: 12px;
+line-height: 12px;
 align-items: center;
 text-align: center;
 
