@@ -20,7 +20,7 @@ export const InputText = styled.input.attrs({ type: 'email' })`
   }
 `;
 export const DivContainerText = styled.div`
-  position: absolute;
+  /* position: absolute; */
   width: 377px;
   height: 58px;
   left: 285px;
@@ -52,14 +52,14 @@ export const InputPass = styled.input.attrs({ type: 'password' })`
   }
 `;
 export const DivContainerPass = styled.div`
-  position: absolute;
+  /* position: absolute; */
   width: 377px;
   height: 58px;
   left: 285px;
   top: 640px;
   display: flex;
   text-align: center;
-  margin-bottom: 33px;
+  margin-bottom: 50px;
   border: 1px solid #ffffff;
   border-radius: 50px;
 `;
