@@ -11,5 +11,6 @@ display: flex;
 margin-bottom: 90px;
 `
 export const SegundaDiv = styled.div`
-display: flex
+display: flex;
+justify-content: space-between;
 `

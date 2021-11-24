@@ -36,7 +36,7 @@ function Home() {
                 <ButtonLogout style={{ position: 'absolute', right: 0 }}>
                     <TextLogout>Logout</TextLogout>
                     </ButtonLogout>
-                <ButtonContNav style={{ position: 'absolute', right: 80 }}>
+                <ButtonContNav style={{ position: 'absolute', right: 90 }}>
                     <TextContNav>Continuar Navegando</TextContNav >
                     </ButtonContNav>
                     <TextFoo>Essa janela do navegador é usada para manter sua sessão de autenticação ativa. Deixe-a aberta em segundo plano e abra uma nova janela para continuar a navegar.</TextFoo>

@@ -26,7 +26,7 @@ height: 8px;
 
 
 export const DivCaixa = styled.div`
-
+margin-right: 10%;
 padding-left: 280px;
 padding-top: 30px;
 

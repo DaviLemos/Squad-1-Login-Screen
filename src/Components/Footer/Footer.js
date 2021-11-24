@@ -4,21 +4,21 @@ export const Footer = styled.div`
 position:relative;
 display:flex;
 width: 100%;
-height: 56px;
+height: 69px;
 Background: linear-gradient(90.16deg, #33383D 0%, #1C1D20 100%);
 margin-top: -50px
 `
 
 export const TextFoo = styled.p` 
-width: 270px;
+width: 370px;
 height: 40px;
-margin-top: 17px;
+margin-top: 22px;
 padding-left: 200px;
 
 font-family: Mark Pro;
 font-style: normal;
 font-weight: normal;
-font-size: 6px;
+font-size: 8px;
 line-height: 10px;
 text-align: right;
 color: #FFFFFF;
@@ -26,14 +26,14 @@ color: #FFFFFF;
 export const TextRefr = styled.p`
 
 width: 60px;
-padding-left: 100px;
-margin-top: 15px;
+padding-left: 80px;
+margin-top: 20px;
 
 
 font-family: Mark Pro;
 font-style: normal;
 font-weight: normal;
-font-size: 8px;
+font-size: 10px;
 line-height: 12px;
 text-align: right;
 color: #FFFFFF;

@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 export const ButtonLogout = styled.button.attrs({ type: 'submit' })`
 
-width: 80px;
-height: 56px;
+width: 90px;
+height: 69px;
 border: none;
 background-color:  #1C1D20;
 cursor: pointer;

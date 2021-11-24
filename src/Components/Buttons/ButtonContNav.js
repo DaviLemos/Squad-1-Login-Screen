@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 export const ButtonContNav = styled.button.attrs({ type: 'submit' })`
 
-width: 80px;
-height: 56px;
+width: 90px;
+height: 69px;
 border: none;
 background-color:  #ffffff;
 cursor: pointer;
