@@ -1,9 +1,8 @@
-import Login from "./Screens/login";
+
+import Login from './Screens/login';
 
 function App() {
-  return (
-    <Login />
-  )
+  return <Login />;
 }
 
 export default App;
