@@ -1,10 +1,10 @@
 import Home from "./Screens/Home";
-// import Login from "./Screens/login";
+import Login from "./Screens/Login";
 
 function App() {
   return (
-    // <Login />
-    <Home/>
+    <Login />
+    //<Home/>
   )
 }
 
