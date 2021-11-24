@@ -57,9 +57,7 @@ function Login() {
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
             />
-            {formik.touched.usuario && formik.errors.usuario ? (
-              <div>{formik.errors.usuario}</div>
-            ) : null}
+
             <User
               color="#E0E0E0"
               size={24}
@@ -77,16 +75,19 @@ function Login() {
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
             />
-            {formik.touched.senha && formik.errors.senha ? (
-              <div>{formik.errors.senha}</div>
-            ) : null}
+
             <Lock
               color="#E0E0E0"
               size={24}
               style={{ marginTop: 'auto', marginBottom: 'auto' }}
             />
           </DivContainerPass>
-
+          {formik.touched.usuario && formik.errors.usuario ? (
+            <div>{formik.errors.usuario}</div>
+          ) : null}
+          {formik.touched.senha && formik.errors.senha ? (
+            <div>{formik.errors.senha}</div>
+          ) : null}
           <Button>
             <Text>Continuar</Text>
           </Button>

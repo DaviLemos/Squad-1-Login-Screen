@@ -7,6 +7,14 @@ import {
   DivContainerText,
   DivContainerPass,
 } from '../Components/Inputs/InputBase';
+import Container from '../Components/Container/Container';
+import Background from '../Components/Background/Background';
+import Saudacao from '../Components/Saudacao/Saudacao';
+import Frase from '../Components/Frase/Frase';
+import Imagem from '../Components/Imagem/Imagem';
+import Logo from '../Components/Logo/Logo';
+import image from '../Images/image2.jpg';
+import LogoCompassoBranco from '../Images/Logo-Compasso-Branco.svg';
 import { User, Lock } from 'react-feather';
 import { Titulo } from '../Components/Titulo/Titulo';
 import { useFormik } from 'formik';
@@ -29,55 +37,70 @@ function Login() {
   });
 
   return (
-    <div>
-      <Form onSubmit={formik.handleSubmit}>
-        <Titulo>Login</Titulo>
+    <Container>
+      <Background>
+        <Saudacao>Olá,</Saudacao>
+        <Frase>
+          Para continuar navegando de forma segura, efetue o login na rede.
+        </Frase>
 
-        <DivContainerText>
-          <InputText
-            placeholder="Usuário"
-            id="usuario"
-            name="usuario"
-            required
-            value={formik.values.usuario}
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-          />
+        <Form onSubmit={formik.handleSubmit}>
+          <Titulo>Login</Titulo>
+
+          <DivContainerText>
+            <InputText
+              placeholder="Usuário"
+              id="usuario"
+              name="usuario"
+              required
+              value={formik.values.usuario}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+            />
+
+            <User
+              color="#E0E0E0"
+              size={24}
+              style={{ marginTop: 'auto', marginBottom: 'auto' }}
+            />
+          </DivContainerText>
+
+          <DivContainerPass>
+            <InputPass
+              placeholder="Senha"
+              id="senha"
+              name="senha"
+              required
+              value={formik.values.senha}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+            />
+
+            <Lock
+              color="#E0E0E0"
+              size={24}
+              style={{ marginTop: 'auto', marginBottom: 'auto' }}
+            />
+          </DivContainerPass>
           {formik.touched.usuario && formik.errors.usuario ? (
             <div>{formik.errors.usuario}</div>
           ) : null}
-          <User
-            color="#E0E0E0"
-            size={24}
-            style={{ marginTop: 'auto', marginBottom: 'auto' }}
-          />
-        </DivContainerText>
-
-        <DivContainerPass>
-          <InputPass
-            placeholder="Senha"
-            id="senha"
-            name="senha"
-            required
-            value={formik.values.senha}
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-          />
           {formik.touched.senha && formik.errors.senha ? (
             <div>{formik.errors.senha}</div>
           ) : null}
-          <Lock
-            color="#E0E0E0"
-            size={24}
-            style={{ marginTop: 'auto', marginBottom: 'auto' }}
-          />
-        </DivContainerPass>
-
-        <Button>
-          <Text>Continuar</Text>
-        </Button>
-      </Form>
-    </div>
+          <Button>
+            <Text>Continuar</Text>
+          </Button>
+        </Form>
+      </Background>
+      <Imagem url={image} className="img_notebook" alt="Notebook">
+        <Logo
+          src={LogoCompassoBranco}
+          className="img_Logo"
+          alt="Logo Compasso Branco"
+        />
+      </Imagem>
+    </Container>
   );
 }
 

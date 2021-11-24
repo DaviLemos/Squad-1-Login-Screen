@@ -6,6 +6,7 @@ export const InputText = styled.input.attrs({ type: 'email' })`
   color: #e0e0e0;
   padding-left: 20px;
   border: none;
+  background: none;
 
   ::placeholder {
     color: #e0e0e0;
@@ -37,6 +38,7 @@ export const InputPass = styled.input.attrs({ type: 'password' })`
   color: #e0e0e0;
   padding-left: 20px;
   border: none;
+  background: none;
 
   ::placeholder {
     color: #e0e0e0;
