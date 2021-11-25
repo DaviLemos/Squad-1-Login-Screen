@@ -21,6 +21,7 @@ import { User, Lock } from 'react-feather';
 import { Titulo } from '../Components/Titulo/Titulo';
 import { useFormik } from 'formik';
 import validate from '../helper/validate.helper';
+import isBoth from '../helper/isBoth.helper';
 //* APi * //
 import { userLogin } from '../api/api';
 
@@ -44,7 +45,7 @@ function Login() {
 
   const handleLogin = (values) => {
     userLogin({ email: values.usuario, password: values.senha }).then(function (
-      data
+      data,
     ) {
       if (data.auth) {
         // Quando loga com sucesso
@@ -111,20 +112,7 @@ function Login() {
             </DivContainerPass>
 
             <Error>
-              {formik.touched.usuario &&
-                formik.errors.usuario &&
-                changeUsuario && (
-                  <div>Ops, usuário inválido. Tente novamente.</div>
-                )}
-              {formik.touched.senha && formik.errors.senha && changeSenha && (
-                <div>Ops,senha inválido. Tente novamente.</div>
-              )}
-              {((formik.touched.usuario && formik.errors.usuario) ||
-                (formik.touched.senha && formik.errors.senha)) &&
-                changeUsuario &&
-                changeSenha && (
-                  <div>Ops, usuário e senha inválido. Tente novamente.</div>
-                )}
+              <div>{isBoth(formik.errors)}</div>
             </Error>
             <Button>
               <Text>Continuar</Text>
