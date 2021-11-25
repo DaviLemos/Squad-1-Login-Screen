@@ -1,12 +1,11 @@
 import React from "react";
 import { LogoBola, PrimeiraDiv, SegundaDiv } from "../Components/Logos/LogoBola";
 import { LogoSuperior } from "../Components/Logos/LogoSuperior";
-import bolaLogoCompasso1 from '../Images/bolaLogoCompasso1.svg'
+import bolaLogoCompasso1 from '../Images/bola-LogoCompasso1.png'
 import LogoCompasso1 from '../Images/LogoCompasso1.svg'
 import Barra from  '../Images/Barradiv.svg'
 import { DivCaixa, Missao, MissaoPequeno } from '../Components/Titulo/Missao'
 import { Footer, TextFoo, TextRefr } from "../Components/Footer/Footer";
-// import styled from "styled-components";
 import { ButtonLogout, TextLogout } from "../Components/Buttons/ButtomLogout";
 import { ButtonContNav, TextContNav } from "../Components/Buttons/ButtonContNav";
 import { DivPagina } from "../Components/DivPagina/DivPagina";
@@ -36,12 +35,12 @@ function Home() {
                 </ DivCaixa >
             </SegundaDiv>
             <Footer>
-                <ButtonLogout style={{ position: 'absolute', right: 0 }}>
+                <ButtonLogout >
                     <TextLogout>Logout</TextLogout>
                     </ButtonLogout>
-                <ButtonContNav style={{ position: 'absolute', right: 90 }}>
+                <ButtonContNav >
                     <TextContNav>Continuar Navegando</TextContNav >
-                    </ButtonContNav>
+                </ButtonContNav>
                     <TextFoo>Essa janela do navegador é usada para manter sua sessão de autenticação ativa. Deixe-a aberta em segundo plano e abra uma nova janela para continuar a navegar.</TextFoo>
                     <BarraDiv src={Barra}/>
                     <TextRefr>Application refresh in</TextRefr>

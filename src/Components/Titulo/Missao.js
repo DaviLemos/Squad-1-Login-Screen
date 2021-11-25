@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { widths } from '../UI/variaveis';
 
 export const Missao = styled.p`
 font-family: Mark Pro;
@@ -10,6 +11,10 @@ text-align: right;
 color: #C12D18;
 margin: 0;
 height: 55px;
+
+@media (max-width: ${widths.sm}) {
+    display:none;
+  }
 `
 
 export const MissaoPequeno = styled.p`
@@ -22,6 +27,10 @@ text-align: right;
 color: #222222;
 margin: 4px 0 0 0;
 height: 8px;
+
+@media (max-width: ${widths.sm}) {
+    display:none;
+  }
  `
 
 
@@ -30,4 +39,8 @@ margin-right: 10%;
 padding-left: 280px;
 padding-top: 30px;
 
+@media (max-width: ${widths.sm}) {
+    display:none;
+    width: 0;
+  }
 `
