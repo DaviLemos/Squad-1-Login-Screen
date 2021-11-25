@@ -1,7 +1,7 @@
 const validate = (values) => {
   const errors = {};
   if (!values.senha) {
-    errors.senha = 'Required';
+    errors.senha = '';
   } else if (
     !/^(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*])(?=.{8,})/.test(values.senha)
   ) {
@@ -9,7 +9,7 @@ const validate = (values) => {
   }
 
   if (!values.usuario) {
-    errors.usuario = 'Required';
+    errors.usuario = '';
   } else if (
     !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.usuario)
   ) {

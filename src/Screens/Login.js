@@ -26,10 +26,9 @@ import isBoth from '../helper/isBoth.helper';
 import { userLogin } from '../api/api';
 
 function Login() {
-  const [countError, setCountError] = useState(0);
-  const [changeUsuario, setChangeUsuario] = useState(false);
-  const [changeSenha, setChangeSenha] = useState(false);
   const [errorMessage, setMessage] = useState('');
+  const [fieldUsuario, setFieldUsuario] = useState(false);
+  const [fieldSenha, setFieldSenha] = useState(false);
 
   const formik = useFormik({
     initialValues: {
@@ -38,22 +37,30 @@ function Login() {
     },
     validate,
     onSubmit: (values) => {
-      // setSenha(values.senha);
       handleLogin(values);
     },
   });
 
   const handleLogin = (values) => {
     userLogin({ email: values.usuario, password: values.senha }).then(function (
-      data,
+      data
     ) {
       if (data.auth) {
         // Quando loga com sucesso
       } else {
-        // Quando tem algum erro na hora de logar
+        console.log(data.message);
+        data.message.includes('usuário')
+          ? setFieldUsuario(true)
+          : setFieldUsuario(false);
+        data.message.includes('senha')
+          ? setFieldSenha(true)
+          : setFieldSenha(false);
+        setMessage(data.message);
       }
     });
   };
+
+  console.log(formik.errors);
 
   return (
     <Container>
@@ -67,7 +74,10 @@ function Login() {
           <Form onSubmit={formik.handleSubmit}>
             <Titulo>Login</Titulo>
             <DivContainerText
-              error={formik.touched.usuario && formik.errors.usuario}
+              error={
+                (formik.touched.usuario && formik.errors.usuario) ||
+                fieldUsuario
+              }
             >
               <InputText
                 placeholder="Usuário"
@@ -76,10 +86,7 @@ function Login() {
                 required
                 value={formik.values.usuario}
                 onChange={formik.handleChange}
-                onBlur={(e) => {
-                  formik.handleBlur(e);
-                  setChangeUsuario(true);
-                }}
+                onBlur={formik.handleBlur}
               />
 
               <User
@@ -89,7 +96,9 @@ function Login() {
               />
             </DivContainerText>
             <DivContainerPass
-              error={formik.touched.senha && formik.errors.senha}
+              error={
+                (formik.touched.senha && formik.errors.senha) || fieldSenha
+              }
             >
               <InputPass
                 placeholder="Senha"
@@ -98,10 +107,7 @@ function Login() {
                 required
                 value={formik.values.senha}
                 onChange={formik.handleChange}
-                onBlur={(e) => {
-                  formik.handleBlur(e);
-                  setChangeSenha(true);
-                }}
+                onBlur={formik.handleBlur}
               />
 
               <Lock
@@ -112,7 +118,13 @@ function Login() {
             </DivContainerPass>
 
             <Error>
-              <div>{isBoth(formik.errors)}</div>
+              {(isBoth(formik.errors) || errorMessage) && (
+                <div>
+                  {' '}
+                  Ops, {isBoth(formik.errors) || errorMessage}.<br /> Tente
+                  Novamente!
+                </div>
+              )}
             </Error>
             <Button>
               <Text>Continuar</Text>

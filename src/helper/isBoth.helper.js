@@ -1,12 +1,13 @@
 function isBoth(erros) {
-  if ((erros.senha === 'Required') | (erros.usuario === 'Required')) {
-    return '';
-  } else if (erros.senha && erros.usuario) {
-    return 'Ops, senha e usuário invalidos.';
+  // if (erros.senha === 'Required' || erros.usuario === 'Required') {
+  //   return '';
+  // } else
+  if (erros.senha && erros.usuario) {
+    return 'usuário e senha invalidos';
   } else if (erros.senha) {
-    return 'Ops, senha inválida.';
+    return 'senha inválida';
   } else if (erros.usuario) {
-    return 'Ops, usuário inválido.';
+    return 'usuário inválido';
   }
 }
 
