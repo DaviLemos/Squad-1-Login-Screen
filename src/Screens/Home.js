@@ -33,16 +33,27 @@ function Home() {
         <DivCaixa>
           <Missao
             style={{ fontSize: '22px', height: '38px', marginBottom: '15px' }}
+            data-testid="missao-text-1"
           >
             Our mission is
           </Missao>
-          <MissaoPequeno>Nossa missão é</MissaoPequeno>
-          <Missao>to transform the world</Missao>
-          <MissaoPequeno>transformar o mundo</MissaoPequeno>
-          <Missao>building digital experiences</Missao>
-          <MissaoPequeno>construindo experiências digitais</MissaoPequeno>
-          <Missao>that enable our client’s growth</Missao>
-          <MissaoPequeno>
+          <MissaoPequeno data-testid="missão-pequeno-text-1">
+            Nossa missão é
+          </MissaoPequeno>
+          <Missao data-testid="missao-text-2">to transform the world</Missao>
+          <MissaoPequeno data-testid="missão-pequeno-text-2">
+            transformar o mundo
+          </MissaoPequeno>
+          <Missao data-testid="missao-text-3">
+            building digital experiences
+          </Missao>
+          <MissaoPequeno data-testid="missão-pequeno-text-3">
+            construindo experiências digitais
+          </MissaoPequeno>
+          <Missao data-testid="missao-text-4">
+            that enable our client’s growth
+          </Missao>
+          <MissaoPequeno data-testid="missão-pequeno-text-4">
             que permitam o crescimento dos nossos clientes
           </MissaoPequeno>
         </DivCaixa>
