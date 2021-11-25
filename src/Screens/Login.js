@@ -62,10 +62,11 @@ function Login() {
           </Frase>
 
           <Form onSubmit={formik.handleSubmit}>
-            <Titulo>Login</Titulo>
+            <Titulo data-testid="login">Login</Titulo>
 
             <DivContainerText>
               <InputText
+                data-testid="input-user"
                 placeholder="Usuário"
                 id="usuario"
                 name="usuario"
@@ -76,6 +77,7 @@ function Login() {
               />
 
               <User
+                data-testid="icon-user"
                 color="#E0E0E0"
                 size={24}
                 style={{ marginTop: 'auto', marginBottom: 'auto' }}
@@ -85,6 +87,7 @@ function Login() {
             <DivContainerPass>
               <InputPass
                 placeholder="Senha"
+                data-testid="input-password"
                 id="senha"
                 name="senha"
                 required
@@ -94,6 +97,7 @@ function Login() {
               />
 
               <Lock
+                data-testid="icon-password"
                 color="#E0E0E0"
                 size={24}
                 style={{ marginTop: 'auto', marginBottom: 'auto' }}
@@ -112,7 +116,7 @@ function Login() {
                 formik.errors.senha &&
                 formik.errors.senha}
             </div>
-            <Button>
+            <Button data-testid="button-login">
               <Text>Continuar</Text>
             </Button>
           </Form>

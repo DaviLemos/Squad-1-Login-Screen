@@ -37,7 +37,7 @@ const Weather = () => {
                 fontSize: '24px',
                 marginTop: 'auto',
                 marginBottom: 'auto',
-                paddingLeft:'15px'
+                paddingLeft: '15px',
               }}
             />
             <WeatherTemperature data-testid="temperature">
