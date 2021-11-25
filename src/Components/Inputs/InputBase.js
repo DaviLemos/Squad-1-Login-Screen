@@ -28,7 +28,7 @@ export const DivContainerText = styled.div`
   display: flex;
   text-align: center;
   margin-bottom: 33px;
-  border: 1px solid #ffffff;
+  border: ${({ error }) => (error ? '1px solid #E9B425' : '1px solid #ffffff')};
   border-radius: 50px;
 `;
 
@@ -60,6 +60,6 @@ export const DivContainerPass = styled.div`
   display: flex;
   text-align: center;
   margin-bottom: 50px;
-  border: 1px solid #ffffff;
+  border: ${({ error }) => (error ? '1px solid #E9B425' : '1px solid #ffffff')};
   border-radius: 50px;
 `;

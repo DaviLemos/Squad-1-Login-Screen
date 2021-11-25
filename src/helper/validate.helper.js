@@ -2,7 +2,9 @@ const validate = (values) => {
   const errors = {};
   if (!values.senha) {
     errors.senha = 'Required';
-  } else if (!/^(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*])(?=.{8,})/.test(values.senha)) {
+  } else if (
+    !/^(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*])(?=.{8,})/.test(values.senha)
+  ) {
     errors.senha = 'Ops, senha inválido';
   }
 
