@@ -66,7 +66,7 @@ class User {
               if (results[1].length === 0) {
                 res.status(400).json({
                   auth: false,
-                  message: 'usuáro inválido',
+                  message: 'usuário inválido',
                 });
               } else {
                 res.status(400).json({
