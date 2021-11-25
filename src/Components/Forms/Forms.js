@@ -8,6 +8,7 @@ export const Form = styled.form`
   height: 100%;
   @media (max-width: ${widths.sm}) {
     width: 80%;
+    height: 450px;
     margin: 0 auto;
   }
 `;

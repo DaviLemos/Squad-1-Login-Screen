@@ -14,6 +14,7 @@ export const Button = styled.button.attrs({ type: 'submit' })`
 
   @media (max-width: ${widths.sm}) {
     width: 100%;
+    margin-top: auto;
     margin-bottom: 15%;
   }
 `;

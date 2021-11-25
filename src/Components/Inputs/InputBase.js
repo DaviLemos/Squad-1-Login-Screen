@@ -68,6 +68,7 @@ export const DivContainerPass = styled.div`
   border: ${({ error }) => (error ? '1px solid #E9B425' : '1px solid #ffffff')};
   border-radius: 50px;
   @media (max-width: ${widths.sm}) {
+    margin-bottom: 33px;
     width: 100%;
     svg {
       margin-right: 5%;

@@ -46,9 +46,10 @@ function Login() {
       data
     ) {
       if (data.auth) {
-        // Quando loga com sucesso
+        setFieldUsuario(false);
+        setFieldSenha(false);
+        setMessage('');
       } else {
-        console.log(data.message);
         data.message.includes('usuário')
           ? setFieldUsuario(true)
           : setFieldUsuario(false);
