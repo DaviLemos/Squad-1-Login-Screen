@@ -24,6 +24,7 @@ import validate from '../helper/validate.helper';
 import isBoth from '../helper/isBoth.helper';
 //* APi * //
 import { userLogin } from '../api/api';
+import ls from 'local-storage';
 
 function Login() {
   const [errorMessage, setMessage] = useState('');
@@ -49,6 +50,7 @@ function Login() {
         setFieldUsuario(false);
         setFieldSenha(false);
         setMessage('');
+        ls.set('token', data.token);
       } else {
         data.message.includes('usuário')
           ? setFieldUsuario(true)
