@@ -24,6 +24,7 @@ import validate from '../helper/validate.helper';
 import isBoth from '../helper/isBoth.helper';
 //* APi * //
 import { userLogin } from '../api/api';
+import { Link } from 'react-router-dom';
 
 function Login() {
   const [errorMessage, setMessage] = useState('');
@@ -43,7 +44,7 @@ function Login() {
 
   const handleLogin = (values) => {
     userLogin({ email: values.usuario, password: values.senha }).then(function (
-      data
+      data,
     ) {
       if (data.auth) {
         setFieldUsuario(false);
@@ -126,7 +127,9 @@ function Login() {
               )}
             </Error>
             <Button>
-              <Text>Continuar</Text>
+              <Link to="/home">
+                <Text>Continuar</Text>
+              </Link>
             </Button>
           </Form>
         </ContentContainer>

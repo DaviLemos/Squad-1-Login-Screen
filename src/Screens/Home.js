@@ -18,6 +18,7 @@ import {
 } from '../Components/Buttons/ButtonContNav';
 import { DivPagina } from '../Components/DivPagina/DivPagina';
 import { BarraDiv } from '../Components/Logos/Barra';
+import { Link } from 'react-router-dom';
 import HorarioEDataAtual from '../Components/HorarioEDataAtual/HorarioEDataAtual';
 import Weather from '../Components/Weather/Weather';
 import ls from 'local-storage';
@@ -54,11 +55,10 @@ function Home() {
         </DivCaixa>
       </SegundaDiv>
       <Footer>
-        <ButtonLogout
-          onClick={() => logoutFunction()}
-          style={{ position: 'absolute', right: 0 }}
-        >
-          <TextLogout>Logout</TextLogout>
+        <ButtonLogout style={{ position: 'absolute', right: 0 }}>
+          <Link to="/">
+            <TextLogout>Logout</TextLogout>
+          </Link>
         </ButtonLogout>
         <ButtonContNav style={{ position: 'absolute', right: 90 }}>
           <TextContNav>Continuar Navegando</TextContNav>
