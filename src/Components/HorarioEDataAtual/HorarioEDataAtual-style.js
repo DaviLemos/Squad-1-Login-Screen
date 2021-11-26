@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { myColor, myFontFamily, myFontstyle } from '../UI/variaveis';
+import { widths } from '../UI/variaveis';
 
 export const StyleParagraph = styled.div`
   font-family: ${myFontFamily};
@@ -11,4 +12,8 @@ export const StyleParagraph = styled.div`
   font-size: ${(props) => props.ftSize};
   line-height: ${(props) => props.lnHeight};
   weight: ${(props) => props.weight};
+
+  @media (max-width: ${widths.sm}) {
+    display:none;
+  }
 `;
