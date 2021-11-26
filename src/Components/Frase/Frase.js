@@ -1,9 +1,7 @@
 import styled from 'styled-components';
+import { widths } from '../UI/variaveis';
 
 const Frase = styled.p`
-  /* position: absolute; */
-  /* left: 287px;
-  top: 320px; */
   width: 301px;
   height: 90px;
 
@@ -18,6 +16,13 @@ const Frase = styled.p`
 
   margin-right: auto;
   margin-top: 0;
+
+  @media (max-width: ${widths.sm}) {
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 5%;
+  }
 `;
 
 export default Frase;

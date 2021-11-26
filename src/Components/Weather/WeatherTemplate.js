@@ -1,27 +1,26 @@
 import styled from 'styled-components';
 
 export const WeatherBox = styled.div`
-  margin-top: 25px;
+  margin-top: 15px;
+
 `;
 
 export const WeatherContent = styled.div`
   display: flex;
   flex-direction: column;
-
-  width: 35%;
+  width: 65%;
 `;
 
 export const WeatherTitle = styled.p`
   display: flex;
-  justify-content: center;
-  align-content: center;
+  align-content: left;
 
   font-family: Mark Pro;
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
-  line-height: 18px;
-
+  font-size: 12px;
+  line-height: 10px;
+  width: 130px;
   margin-top: auto;
   margin-bottom: auto;
 `;
@@ -32,12 +31,13 @@ export const WeatherData = styled.div`
 `;
 
 export const WeatherTemperature = styled.div`
-  margin-top: auto;
+  margin-top: 8px;
   margin-bottom: auto;
   margin-left: 10px;
 
+
   font-family: Mark Pro;
-  font-size: 48px;
+  font-size: 28px;
   font-style: normal;
   font-weight: bold;
 

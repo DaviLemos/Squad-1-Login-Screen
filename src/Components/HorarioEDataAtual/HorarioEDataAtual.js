@@ -28,10 +28,10 @@ const HorarioEDataAtual = () => {
     <div>
       <StyleParagraph
         ftWeight="bold"
-        ftSize="144px"
-        lnHeight="183px"
-        weight="700"
-        margin="0"
+        ftSize="100px"
+        lnHeight="100px"
+        // weight="700" 
+        margin="20px"
       >
         {`${new Date().getHours()}:${
           new Date().getMinutes() < 10
@@ -41,10 +41,8 @@ const HorarioEDataAtual = () => {
       </StyleParagraph>
       <StyleParagraph
         ftWeight="normal"
-        ftSize="14px"
-        lnHeight="18px"
-        weight="400"
-        margin="-40px"
+        ftSize="10px"
+        margin="-35px"
       >{`${getDayPT(horarioEData.day)}, ${
         horarioEData.diaNumerico
       } de ${getMesPT(horarioEData.mes)} de ${

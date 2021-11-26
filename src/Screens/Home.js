@@ -19,12 +19,21 @@ import {
 import { DivPagina } from '../Components/DivPagina/DivPagina';
 import { BarraDiv } from '../Components/Logos/Barra';
 import { Link } from 'react-router-dom';
+import HorarioEDataAtual from '../Components/HorarioEDataAtual/HorarioEDataAtual';
+import Weather from '../Components/Weather/Weather';
+import ls from 'local-storage';
 
 function Home() {
+  function logoutFunction() {
+    ls.remove('token');
+  }
+
   return (
     <DivPagina>
       <PrimeiraDiv>
         <LogoSuperior src={LogoCompasso1} alt="Logo Compasso Superior" />
+        <HorarioEDataAtual />
+        <Weather />
       </PrimeiraDiv>
       <SegundaDiv>
         <LogoBola src={bolaLogoCompasso1} alt="Logo Compasso" />

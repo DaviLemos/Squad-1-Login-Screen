@@ -9,6 +9,7 @@ height: 25%;
 export const PrimeiraDiv = styled.div`
 display: flex; 
 margin-bottom: 90px;
+justify-content: space-between;
 `
 export const SegundaDiv = styled.div`
 display: flex;
