@@ -11,6 +11,8 @@ import Barra from '../Images/Barradiv.svg';
 import { DivCaixa, Missao, MissaoPequeno } from '../Components/Titulo/Missao';
 import { Footer, TextFoo, TextRefr } from '../Components/Footer/Footer';
 // import styled from "styled-components";
+
+import ContadorLogout from '../helper/ContadorLogout.js';
 import { ButtonLogout, TextLogout } from '../Components/Buttons/ButtomLogout';
 import {
   ButtonContNav,
@@ -70,6 +72,7 @@ function Home() {
         </TextFoo>
         <BarraDiv src={Barra} />
         <TextRefr>Application refresh in</TextRefr>
+        <ContadorLogout />
       </Footer>
     </DivPagina>
   );
