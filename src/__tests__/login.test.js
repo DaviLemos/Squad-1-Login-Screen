@@ -3,7 +3,7 @@ import React from 'react';
 // * Test * //
 import { render, screen, fireEvent } from '@testing-library/react';
 // * Component * //
-import Login from '../Screens/login';
+import Login from '../Screens/Login';
 
 describe('Login Component:', () => {
   describe('Title Component:', () => {

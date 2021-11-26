@@ -39,7 +39,7 @@ const ContadorLogout = ({ token }) => {
           ];
           var secondsA = +a[0] * 60 * 60 + +a[1] * 60 + +a[2];
           var secondsB = +b[0] * 60 * 60 + +b[1] * 60 + +b[2];
-          secondsA - secondsB < 0
+          secondsA - secondsB <= 0
             ? toLogin()
             : setContador(secondsA - secondsB);
         }

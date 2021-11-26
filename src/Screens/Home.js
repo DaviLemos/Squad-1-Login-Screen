@@ -34,12 +34,8 @@ function Home() {
 
   useEffect(() => {
     let token = ls.get('token');
-    if (token) {
-      setToken(token);
-    } else {
-      navigate('/');
-    }
-  });
+    setToken(token);
+  }, []);
 
   return (
     <DivPagina>
