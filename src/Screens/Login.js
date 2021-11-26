@@ -14,40 +14,50 @@ import Frase from '../Components/Frase/Frase';
 import Imagem from '../Components/Imagem/Imagem';
 import Logo from '../Components/Logo/Logo';
 import ContentContainer from '../Components/ContentContainer/ContentContainer';
+import Error from '../Components/Error/Error';
 import image from '../Images/image2.jpg';
 import LogoCompassoBranco from '../Images/Logo-Compasso-Branco.svg';
 import { User, Lock } from 'react-feather';
 import { Titulo } from '../Components/Titulo/Titulo';
 import { useFormik } from 'formik';
 import validate from '../helper/validate.helper';
+import isBoth from '../helper/isBoth.helper';
 //* APi * //
 import { userLogin } from '../api/api';
+import { Link } from 'react-router-dom';
 
 function Login() {
-  const [usuario, setUsuario] = React.useState('');
-  const [senha, setSenha] = React.useState('');
+  const [errorMessage, setMessage] = useState('');
+  const [fieldUsuario, setFieldUsuario] = useState(false);
+  const [fieldSenha, setFieldSenha] = useState(false);
 
   const formik = useFormik({
     initialValues: {
-      usuario: '',
-      senha: '',
+      usuario: null,
+      senha: null,
     },
     validate,
     onSubmit: (values) => {
-      setUsuario(values.usuario);
-      setSenha(values.senha);
       handleLogin(values);
     },
   });
 
   const handleLogin = (values) => {
     userLogin({ email: values.usuario, password: values.senha }).then(function (
-      data
+      data,
     ) {
       if (data.auth) {
-        // Quando loga com sucesso
+        setFieldUsuario(false);
+        setFieldSenha(false);
+        setMessage('');
       } else {
-        // Quando tem algum erro na hora de logar
+        data.message.includes('usuário')
+          ? setFieldUsuario(true)
+          : setFieldUsuario(false);
+        data.message.includes('senha')
+          ? setFieldSenha(true)
+          : setFieldSenha(false);
+        setMessage(data.message);
       }
     });
   };
@@ -63,8 +73,12 @@ function Login() {
 
           <Form onSubmit={formik.handleSubmit}>
             <Titulo>Login</Titulo>
-
-            <DivContainerText>
+            <DivContainerText
+              error={
+                (formik.touched.usuario && formik.errors.usuario) ||
+                fieldUsuario
+              }
+            >
               <InputText
                 placeholder="Usuário"
                 id="usuario"
@@ -81,8 +95,11 @@ function Login() {
                 style={{ marginTop: 'auto', marginBottom: 'auto' }}
               />
             </DivContainerText>
-
-            <DivContainerPass>
+            <DivContainerPass
+              error={
+                (formik.touched.senha && formik.errors.senha) || fieldSenha
+              }
+            >
               <InputPass
                 placeholder="Senha"
                 id="senha"
@@ -99,21 +116,20 @@ function Login() {
                 style={{ marginTop: 'auto', marginBottom: 'auto' }}
               />
             </DivContainerPass>
-            <div
-              style={{
-                color: '#E9B425',
-                textAlign: 'center',
-              }}
-            >
-              {formik.touched.usuario &&
-                formik.errors.usuario &&
-                'Ops, usuário inválido. Tente novamente.'}
-              {formik.touched.senha &&
-                formik.errors.senha &&
-                formik.errors.senha}
-            </div>
+
+            <Error>
+              {(isBoth(formik.errors) || errorMessage) && (
+                <div>
+                  {' '}
+                  Ops, {isBoth(formik.errors) || errorMessage}.<br /> Tente
+                  Novamente!
+                </div>
+              )}
+            </Error>
             <Button>
-              <Text>Continuar</Text>
+              <Link to="/home">
+                <Text>Continuar</Text>
+              </Link>
             </Button>
           </Form>
         </ContentContainer>

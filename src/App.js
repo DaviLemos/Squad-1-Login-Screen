@@ -1,11 +1,17 @@
 import Login from './Screens/Login';
 import Home from './Screens/Home';
-import ContadorLogout from './helper/ContadorLogout';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <Home/>
-    //<Login />
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/home" element={<Home />} />
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 
