@@ -66,7 +66,7 @@ class User {
               if (results[1].length === 0) {
                 res.status(400).json({
                   auth: false,
-                  message: 'usuáro inválido',
+                  message: 'usuário inválido',
                 });
               } else {
                 res.status(400).json({
@@ -82,7 +82,7 @@ class User {
             res.status(200).json({
               auth: true,
               message: 'usuário logado com sucesso',
-              token: jwt.sign(data_token, 'PRIVATEKEY', { expiresIn: 300 }),
+              token: jwt.sign(data_token, 'PRIVATEKEY', { expiresIn: 600 }),
             });
           }
         }

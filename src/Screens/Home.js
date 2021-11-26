@@ -12,7 +12,37 @@ import { DivPagina } from "../Components/DivPagina/DivPagina";
 import { BarraDiv } from "../Components/Logos/Barra";
 import HorarioEDataAtual from "../Components/HorarioEDataAtual/HorarioEDataAtual";
 import  Weather from "../Components/Weather/Weather";
+import React from 'react';
+import {
+  LogoBola,
+  PrimeiraDiv,
+  SegundaDiv,
+} from '../Components/Logos/LogoBola';
+import { LogoSuperior } from '../Components/Logos/LogoSuperior';
+import bolaLogoCompasso1 from '../Images/bolaLogoCompasso1.svg';
+import LogoCompasso1 from '../Images/LogoCompasso1.svg';
+import Barra from '../Images/Barradiv.svg';
+import { DivCaixa, Missao, MissaoPequeno } from '../Components/Titulo/Missao';
+import { Footer, TextFoo, TextRefr } from '../Components/Footer/Footer';
+// import styled from "styled-components";
+
+import ContadorLogout from '../helper/ContadorLogout.js';
+import { ButtonLogout, TextLogout } from '../Components/Buttons/ButtomLogout';
+import {
+  ButtonContNav,
+  TextContNav,
+} from '../Components/Buttons/ButtonContNav';
+import { DivPagina } from '../Components/DivPagina/DivPagina';
+import { BarraDiv } from '../Components/Logos/Barra';
+import { Link } from 'react-router-dom';
+import HorarioEDataAtual from '../Components/HorarioEDataAtual/HorarioEDataAtual';
+import Weather from '../Components/Weather/Weather';
+import ls from 'local-storage';
+
 function Home() {
+  function logoutFunction() {
+    ls.remove('token');
+  }
 
     return (
         <DivPagina>
@@ -36,7 +66,9 @@ function Home() {
             </SegundaDiv>
             <Footer>
                 <ButtonLogout >
-                    <TextLogout>Logout</TextLogout>
+                   <Link to="/">
+            <TextLogout>Logout</TextLogout>
+          </Link>
                     </ButtonLogout>
                 <ButtonContNav >
                     <TextContNav>Continuar Navegando</TextContNav >
@@ -44,10 +76,10 @@ function Home() {
                     <TextFoo>Essa janela do navegador é usada para manter sua sessão de autenticação ativa. Deixe-a aberta em segundo plano e abra uma nova janela para continuar a navegar.</TextFoo>
                     <BarraDiv src={Barra}/>
                     <TextRefr>Application refresh in</TextRefr>
-                    
+                    <ContadorLogout />
             </Footer>
         </DivPagina>
     )
 }
 
-export default Home
+export default Home;
