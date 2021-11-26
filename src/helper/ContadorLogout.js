@@ -1,15 +1,23 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Route, IndexRoute } from 'react-router';
 import { useJwt } from 'react-jwt';
 import TimeLogout from '../Components/Time Logout/TimeLogout';
+import TimerContainer from '../Components/TimerContainer/TimerContainer';
 import Seconds from '../Components/Seconds/Seconds';
 import Login from '../Screens/Login';
 import App from '../App';
 import ls from 'local-storage';
 
-const ContadorLogout = ({ token, toLogin }) => {
+const ContadorLogout = ({ token }) => {
+  const navigate = useNavigate();
   const [contador, setContador] = useState();
   const { decodedToken, isExpired } = useJwt(token);
+
+  function toLogin() {
+    ls.remove('token');
+    navigate('/');
+  }
 
   useEffect(() => {
     const intervalo = setInterval(() => {
@@ -41,10 +49,10 @@ const ContadorLogout = ({ token, toLogin }) => {
   }, [decodedToken, isExpired]);
 
   return (
-    <>
+    <TimerContainer>
       <TimeLogout>{contador}</TimeLogout>
       <Seconds>Seconds</Seconds>
-    </>
+    </TimerContainer>
   );
 };
 

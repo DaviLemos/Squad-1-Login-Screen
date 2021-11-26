@@ -80,12 +80,9 @@ function Home() {
           janela para continuar a navegar.
         </TextFoo>
         <BarraDiv src={Barra} />
-        <TextRefr>Application refresh in</TextRefr>
-        <ContadorLogout
-          token={token}
-          navigate={navigate}
-          toLogin={logoutFunction}
-        />
+        <TextRefr>
+          Application refresh in <ContadorLogout token={token} />
+        </TextRefr>
       </Footer>
     </DivPagina>
   );
