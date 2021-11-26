@@ -11,6 +11,7 @@ import { ButtonLogout, TextLogout } from "../Components/Buttons/ButtomLogout";
 import { ButtonContNav, TextContNav } from "../Components/Buttons/ButtonContNav";
 import { DivPagina } from "../Components/DivPagina/DivPagina";
 import { BarraDiv } from "../Components/Logos/Barra";
+import ContadorLogout from '../helper/ContadorLogout.js';
 
 function Home() {
 
@@ -42,6 +43,7 @@ function Home() {
                     <TextFoo>Essa janela do navegador é usada para manter sua sessão de autenticação ativa. Deixe-a aberta em segundo plano e abra uma nova janela para continuar a navegar.</TextFoo>
                     <BarraDiv src={Barra}/>
                     <TextRefr>Application refresh in</TextRefr>
+                    <ContadorLogout/>
                     
             </Footer>
         </DivPagina>

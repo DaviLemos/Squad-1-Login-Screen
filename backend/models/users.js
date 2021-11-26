@@ -82,7 +82,7 @@ class User {
             res.status(200).json({
               auth: true,
               message: 'usuário logado com sucesso',
-              token: jwt.sign(data_token, 'PRIVATEKEY', { expiresIn: 300 }),
+              token: jwt.sign(data_token, 'PRIVATEKEY', { expiresIn: 600 }),
             });
           }
         }

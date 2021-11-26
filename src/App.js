@@ -1,10 +1,11 @@
 import Login from './Screens/Login';
 import Home from './Screens/Home';
+import ContadorLogout from './helper/ContadorLogout';
 
 function App() {
   return (
-    <Login />
-    //<Home/>
+    <Home/>
+    //<Login />
   );
 }
 
