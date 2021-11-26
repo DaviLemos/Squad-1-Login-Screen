@@ -1,17 +1,18 @@
 import Login from './Screens/Login';
 import Home from './Screens/Home';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 
 function App() {
   return (
-    <>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Login />} />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/home" element={<PrivateRoute />}>
           <Route path="/home" element={<Home />} />
-        </Routes>
-      </BrowserRouter>
-    </>
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
