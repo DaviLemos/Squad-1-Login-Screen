@@ -1,0 +1,276 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Login Component: Should render correctly 1`] = `
+<div>
+  <div
+    class="sc-iCfMLu kuvhHl"
+  >
+    <div
+      class="sc-furwcr gqtzCm"
+    >
+      <div
+        class="sc-crHmcD juGKFM"
+      >
+        <h1
+          class="sc-pVTFL jPPtoB"
+          data-testid="solutation"
+        >
+          Olá,
+        </h1>
+        <p
+          class="sc-jrQzAO enGijf"
+        >
+          Para continuar navegando de forma segura, efetue o login na rede.
+        </p>
+        <form
+          class="sc-dkPtRN fLQwHi"
+        >
+          <span
+            class="sc-bqiRlB ghImxJ"
+            data-testid="login"
+          >
+            Login
+          </span>
+          <div
+            class="sc-jRQBWg clacSb"
+          >
+            <input
+              class="sc-hKwDye fzXzce"
+              data-testid="input-user"
+              id="usuario"
+              name="usuario"
+              placeholder="Usuário"
+              required=""
+              type="email"
+              value=""
+            />
+            <svg
+              data-testid="icon-user"
+              fill="none"
+              height="24"
+              stroke="#E0E0E0"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              style="margin-top: auto; margin-bottom: auto;"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"
+              />
+              <circle
+                cx="12"
+                cy="7"
+                r="4"
+              />
+            </svg>
+          </div>
+          <div
+            class="sc-gKclnd cArwuP"
+          >
+            <input
+              class="sc-eCImPb kUijYi"
+              data-testid="input-password"
+              id="senha"
+              name="senha"
+              placeholder="Senha"
+              required=""
+              type="password"
+              value=""
+            />
+            <svg
+              data-testid="icon-password"
+              fill="none"
+              height="24"
+              stroke="#E0E0E0"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              style="margin-top: auto; margin-bottom: auto;"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                height="11"
+                rx="2"
+                ry="2"
+                width="18"
+                x="3"
+                y="11"
+              />
+              <path
+                d="M7 11V7a5 5 0 0 1 10 0v4"
+              />
+            </svg>
+          </div>
+          <span
+            class="sc-egiyK hHXGfM"
+          />
+          <button
+            class="sc-bdvvtL kFtYDH"
+            data-testid="button-login"
+            type="submit"
+          >
+            <p
+              class="sc-gsDKAQ gMaWpp"
+            >
+              Continuar
+            </p>
+          </button>
+        </form>
+      </div>
+    </div>
+    <div
+      alt="Notebook"
+      class="sc-kDTinF bIyCkS img_notebook"
+    >
+      <img
+        alt="Logo Compasso Branco"
+        class="sc-iqseJM krDwjj img_Logo"
+        src="Logo-Compasso-Branco.svg"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Login Component: Solutation Component: Have Solutation  1`] = `undefined`;
+
+exports[`Login Component: Solutation Component: Should render correctly 1`] = `
+<div>
+  <div
+    class="sc-iCfMLu kuvhHl"
+  >
+    <div
+      class="sc-furwcr gqtzCm"
+    >
+      <div
+        class="sc-crHmcD juGKFM"
+      >
+        <h1
+          class="sc-pVTFL jPPtoB"
+        >
+          Olá,
+        </h1>
+        <p
+          class="sc-jrQzAO enGijf"
+        >
+          Para continuar navegando de forma segura, efetue o login na rede.
+        </p>
+        <form
+          class="sc-dkPtRN fLQwHi"
+        >
+          <span
+            class="sc-bqiRlB ghImxJ"
+            data-testid="login"
+          >
+            Login
+          </span>
+          <div
+            class="sc-jRQBWg clacSb"
+          >
+            <input
+              class="sc-hKwDye fzXzce"
+              data-testid="input-user"
+              id="usuario"
+              name="usuario"
+              placeholder="Usuário"
+              required=""
+              type="email"
+              value=""
+            />
+            <svg
+              data-testid="icon-user"
+              fill="none"
+              height="24"
+              stroke="#E0E0E0"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              style="margin-top: auto; margin-bottom: auto;"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"
+              />
+              <circle
+                cx="12"
+                cy="7"
+                r="4"
+              />
+            </svg>
+          </div>
+          <div
+            class="sc-gKclnd cArwuP"
+          >
+            <input
+              class="sc-eCImPb kUijYi"
+              data-testid="input-password"
+              id="senha"
+              name="senha"
+              placeholder="Senha"
+              required=""
+              type="password"
+              value=""
+            />
+            <svg
+              data-testid="icon-password"
+              fill="none"
+              height="24"
+              stroke="#E0E0E0"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              style="margin-top: auto; margin-bottom: auto;"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                height="11"
+                rx="2"
+                ry="2"
+                width="18"
+                x="3"
+                y="11"
+              />
+              <path
+                d="M7 11V7a5 5 0 0 1 10 0v4"
+              />
+            </svg>
+          </div>
+          <span
+            class="sc-egiyK hHXGfM"
+          />
+          <button
+            class="sc-bdvvtL kFtYDH"
+            data-testid="button-login"
+            type="submit"
+          >
+            <p
+              class="sc-gsDKAQ gMaWpp"
+            >
+              Continuar
+            </p>
+          </button>
+        </form>
+      </div>
+    </div>
+    <div
+      alt="Notebook"
+      class="sc-kDTinF bIyCkS img_notebook"
+    >
+      <img
+        alt="Logo Compasso Branco"
+        class="sc-iqseJM krDwjj img_Logo"
+        src="Logo-Compasso-Branco.svg"
+      />
+    </div>
+  </div>
+</div>
+`;

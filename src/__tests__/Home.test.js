@@ -5,6 +5,8 @@ import '@testing-library/jest-dom/extend-expect';
 import { render, screen } from '@testing-library/react';
 // * Component * //
 import Home from '../Screens/Home';
+// * Hook * //
+import { useNavigate } from 'react-router-dom';
 
 jest.mock('react-router-dom', () => {
   // Require the original module to not be mocked...
@@ -40,15 +42,15 @@ describe('Home Component:', () => {
     const missao_pequeno_text_1 = screen.getByText('Nossa missão é');
     const missao_pequeno_text_2 = screen.getByText('transformar o mundo');
     const missao_pequeno_text_3 = screen.getByText(
-      'construindo experiências digitais',
+      'construindo experiências digitais'
     );
     const missao_pequeno_text_4 = screen.getByText(
-      'que permitam o crescimento dos nossos clientes',
+      'que permitam o crescimento dos nossos clientes'
     );
     const text_logout = screen.getByText('Logout');
     const text_nav_cont = screen.getByText('Continuar Navegando');
     const text_footer = screen.getByText(
-      'Essa janela do navegador é usada para manter sua sessão de autenticação ativa. Deixe-a aberta em segundo plano e abra uma nova janela para continuar a navegar.',
+      'Essa janela do navegador é usada para manter sua sessão de autenticação ativa. Deixe-a aberta em segundo plano e abra uma nova janela para continuar a navegar.'
     );
     const ext_refresh = screen.getByText('Application refresh in');
     expect(missao_text_1).toBeInTheDocument();
@@ -63,13 +65,5 @@ describe('Home Component:', () => {
     expect(text_nav_cont).toBeInTheDocument();
     expect(text_footer).toBeInTheDocument();
     expect(ext_refresh).toBeInTheDocument();
-  });
-
-  it('Button onClick:', () => {
-    const mockLogout = jest.fn();
-    render(<Home />);
-    const button = screen.getByTestId('btnLogout');
-    button.click();
-    expect(mockLogout).toHaveBeenCalled();
   });
 });

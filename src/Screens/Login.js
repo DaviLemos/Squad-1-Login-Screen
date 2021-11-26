@@ -46,7 +46,7 @@ function Login() {
 
   const handleLogin = (values) => {
     userLogin({ email: values.usuario, password: values.senha }).then(function (
-      data,
+      data
     ) {
       if (data.auth) {
         setFieldUsuario(false);
@@ -70,7 +70,7 @@ function Login() {
     <Container>
       <Background>
         <ContentContainer>
-          <Saudacao>Olá,</Saudacao>
+          <Saudacao data-testid="solutation">Olá,</Saudacao>
           <Frase>
             Para continuar navegando de forma segura, efetue o login na rede.
           </Frase>

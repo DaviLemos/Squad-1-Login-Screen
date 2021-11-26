@@ -7,10 +7,11 @@ import {
   fireEvent,
   userEvent,
   waitFor,
+  act,
 } from '@testing-library/react';
+import user from '@testing-library/user-event';
 // * Component * //
 import Login from '../Screens/Login';
-import { act } from 'react-dom/test-utils';
 
 jest.mock('react-router-dom', () => {
   // Require the original module to not be mocked...
@@ -25,19 +26,26 @@ jest.mock('react-router-dom', () => {
 });
 
 describe('Login Component:', () => {
+  it('Should render correctly', () => {
+    const { container } = render(<Login />);
+    expect(container).toMatchSnapshot();
+  });
+  describe('Solutation Component:', () => {
+    it('Have Solutation', () => {
+      render(<Login />);
+      expect(screen.getByTestId('solutation')).toBeInTheDocument();
+    });
+  });
+
   describe('Title Component:', () => {
     it('Have Title Login', () => {
-      act(() => {
-        render(<Login />);
-      });
+      render(<Login />);
 
       expect(screen.getByText('Login')).toBeInTheDocument();
     });
 
     it('Title Have Style', () => {
-      act(() => {
-        render(<Login />);
-      });
+      render(<Login />);
 
       expect(screen.getByTestId('login')).toHaveStyle({
         color: '#E0E0E0',
@@ -49,27 +57,21 @@ describe('Login Component:', () => {
 
   describe('Inputs Component:', () => {
     it('Have Two Inputs', () => {
-      act(() => {
-        render(<Login />);
-      });
+      render(<Login />);
 
       expect(screen.getByTestId('input-user')).toBeInTheDocument();
       expect(screen.getByTestId('input-password')).toBeInTheDocument();
     });
 
     it('Have Two Icons', () => {
-      act(() => {
-        render(<Login />);
-      });
+      render(<Login />);
 
       expect(screen.getByTestId('icon-user')).toBeInTheDocument();
       expect(screen.getByTestId('icon-password')).toBeInTheDocument();
     });
 
     it('Input Have Style', () => {
-      act(() => {
-        render(<Login />);
-      });
+      render(<Login />);
 
       expect(screen.getByTestId('input-user')).toHaveStyle({
         width: '310px',
@@ -83,40 +85,36 @@ describe('Login Component:', () => {
       });
     });
 
-    it('Updates onChange', () => {
+    it('Updates onChange', async () => {
+      const promise = Promise.resolve();
       const { getByTestId } = render(<Login />);
 
-      const user = getByTestId('input-user');
-      const password = getByTestId('input-password');
+      const userInput = getByTestId('input-user');
+      const passwordInput = getByTestId('input-password');
 
-      fireEvent.change(user, { target: { value: 'davi@furg.br' } });
-      fireEvent.change(password, { target: { value: '1@5aeD38' } });
+      user.type(userInput, 'davi@furg.br');
+      user.type(passwordInput, '1@5aeD38');
 
-      expect(user.value).toBe('davi@furg.br');
-      expect(password.value).toBe('1@5aeD38');
+      expect(userInput.value).toBe('davi@furg.br');
+      expect(passwordInput.value).toBe('1@5aeD38');
+      await act(() => promise);
     });
   });
 
   describe('Button Component:', () => {
     it('Have Button', () => {
-      act(() => {
-        render(<Login />);
-      });
+      render(<Login />);
 
       expect(screen.getByTestId('button-login')).toBeInTheDocument();
     });
 
     it('Have Text "Continuar" in button', () => {
-      act(() => {
-        render(<Login />);
-      });
+      render(<Login />);
 
       expect(screen.getByText('Continuar')).toBeInTheDocument();
     });
     it('Button Have Style', () => {
-      act(() => {
-        render(<Login />);
-      });
+      render(<Login />);
 
       expect(screen.getByTestId('button-login')).toHaveStyle({
         background: 'linear-gradient(90deg, #FF2D04 0%, #C13216 100%)',
@@ -125,15 +123,6 @@ describe('Login Component:', () => {
         height: '67px',
         cursor: 'pointer',
         border: 'none',
-      });
-    });
-
-    it('OnSubmit Click', () => {
-      test('Clicking the submit button after entering values', () => {
-        const handleSubmit = jest.fn();
-        const submitButtonNode = render(<Login />).getByTestId('button-login');
-        fireEvent.click(submitButtonNode);
-        expect(handleSubmit).toHaveBeenCalledTimes(1);
       });
     });
   });

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const ErrorP = styled.p`
+const ErrorP = styled.span`
   font-family: Mark Pro;
   font-style: normal;
   font-weight: bold;

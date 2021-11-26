@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Titulo = styled.p`
+export const Titulo = styled.span`
   width: 81px;
   height: 38px;
 
