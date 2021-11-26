@@ -10,6 +10,7 @@ import {
 } from '@testing-library/react';
 // * Component * //
 import Login from '../Screens/Login';
+import { act } from 'react-dom/test-utils';
 
 jest.mock('react-router-dom', () => {
   // Require the original module to not be mocked...
@@ -26,13 +27,17 @@ jest.mock('react-router-dom', () => {
 describe('Login Component:', () => {
   describe('Title Component:', () => {
     it('Have Title Login', () => {
-      render(<Login />);
+      act(() => {
+        render(<Login />);
+      });
 
       expect(screen.getByText('Login')).toBeInTheDocument();
     });
 
     it('Title Have Style', () => {
-      render(<Login />);
+      act(() => {
+        render(<Login />);
+      });
 
       expect(screen.getByTestId('login')).toHaveStyle({
         color: '#E0E0E0',
@@ -44,21 +49,27 @@ describe('Login Component:', () => {
 
   describe('Inputs Component:', () => {
     it('Have Two Inputs', () => {
-      render(<Login />);
+      act(() => {
+        render(<Login />);
+      });
 
       expect(screen.getByTestId('input-user')).toBeInTheDocument();
       expect(screen.getByTestId('input-password')).toBeInTheDocument();
     });
 
     it('Have Two Icons', () => {
-      render(<Login />);
+      act(() => {
+        render(<Login />);
+      });
 
       expect(screen.getByTestId('icon-user')).toBeInTheDocument();
       expect(screen.getByTestId('icon-password')).toBeInTheDocument();
     });
 
     it('Input Have Style', () => {
-      render(<Login />);
+      act(() => {
+        render(<Login />);
+      });
 
       expect(screen.getByTestId('input-user')).toHaveStyle({
         width: '310px',
@@ -88,18 +99,24 @@ describe('Login Component:', () => {
 
   describe('Button Component:', () => {
     it('Have Button', () => {
-      render(<Login />);
+      act(() => {
+        render(<Login />);
+      });
 
       expect(screen.getByTestId('button-login')).toBeInTheDocument();
     });
 
     it('Have Text "Continuar" in button', () => {
-      render(<Login />);
+      act(() => {
+        render(<Login />);
+      });
 
       expect(screen.getByText('Continuar')).toBeInTheDocument();
     });
     it('Button Have Style', () => {
-      render(<Login />);
+      act(() => {
+        render(<Login />);
+      });
 
       expect(screen.getByTestId('button-login')).toHaveStyle({
         background: 'linear-gradient(90deg, #FF2D04 0%, #C13216 100%)',

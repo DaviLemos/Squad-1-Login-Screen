@@ -27,16 +27,13 @@ function Home() {
   const navigate = useNavigate();
 
   const [token, setToken] = useState();
-
   function logoutFunction() {
     ls.remove('token');
-
     navigate('/');
   }
 
   useEffect(() => {
     let token = ls.get('token');
-
     setToken(token);
   }, []);
 
@@ -79,8 +76,9 @@ function Home() {
           janela para continuar a navegar.
         </TextFoo>
         <BarraDiv src={Barra} />
-        <TextRefr>Application refresh in</TextRefr>
-        <ContadorLogout token={token} />
+        <TextRefr>
+          Application refresh in <ContadorLogout token={token} />
+        </TextRefr>
       </Footer>
     </DivPagina>
   );
