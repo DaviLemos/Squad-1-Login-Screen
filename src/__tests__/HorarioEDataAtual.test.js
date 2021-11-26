@@ -1,8 +1,8 @@
 import React from 'react';
 import HorarioEDataAtual from '../Components/HorarioEDataAtual/HorarioEDataAtual';
 import { render, screen } from '@testing-library/react';
-import getmes from '../Components/helper/getmes.helper';
-import getday from '../Components/helper/getday.helper';
+import getmes from '../helper/getmes.helper';
+import getday from '../helper/getday.helper';
 
 describe('HorarioEDataAtual Component', () => {
   // Valores injetados para testes
@@ -34,12 +34,6 @@ describe('HorarioEDataAtual Component', () => {
         fontFamily: 'Mark Pro',
         fontStyle: 'normal',
         color: '#222222',
-        textAlign: 'center',
-        margin: '0px',
-        fontWeight: 'bold',
-        fontSize: '144px',
-        lineHeight: '183px',
-        weight: '700',
       });
     });
 
@@ -65,12 +59,6 @@ describe('HorarioEDataAtual Component', () => {
           fontFamily: 'Mark Pro',
           fontStyle: 'normal',
           color: '#222222',
-          textAlign: 'center',
-          margin: '-40px',
-          fontWeight: 'normal',
-          fontSize: '14px',
-          lineHeight: '18px',
-          weight: '400',
         });
       });
     });

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Button, Text } from '../Components/Buttons/ButtonContinue';
 import { Form } from '../Components/Forms/Forms';
 import {
@@ -24,9 +25,10 @@ import validate from '../helper/validate.helper';
 import isBoth from '../helper/isBoth.helper';
 //* APi * //
 import { userLogin } from '../api/api';
-import { Link } from 'react-router-dom';
+import ls from 'local-storage';
 
 function Login() {
+  const navigate = useNavigate();
   const [errorMessage, setMessage] = useState('');
   const [fieldUsuario, setFieldUsuario] = useState(false);
   const [fieldSenha, setFieldSenha] = useState(false);
@@ -50,6 +52,8 @@ function Login() {
         setFieldUsuario(false);
         setFieldSenha(false);
         setMessage('');
+        ls.set('token', data.token);
+        navigate('/home');
       } else {
         data.message.includes('usuário')
           ? setFieldUsuario(true)
@@ -72,7 +76,7 @@ function Login() {
           </Frase>
 
           <Form onSubmit={formik.handleSubmit}>
-            <Titulo>Login</Titulo>
+            <Titulo data-testid="login">Login</Titulo>
             <DivContainerText
               error={
                 (formik.touched.usuario && formik.errors.usuario) ||
@@ -80,6 +84,7 @@ function Login() {
               }
             >
               <InputText
+                data-testid="input-user"
                 placeholder="Usuário"
                 id="usuario"
                 name="usuario"
@@ -90,6 +95,7 @@ function Login() {
               />
 
               <User
+                data-testid="icon-user"
                 color="#E0E0E0"
                 size={24}
                 style={{ marginTop: 'auto', marginBottom: 'auto' }}
@@ -101,6 +107,7 @@ function Login() {
               }
             >
               <InputPass
+                data-testid="input-password"
                 placeholder="Senha"
                 id="senha"
                 name="senha"
@@ -111,6 +118,7 @@ function Login() {
               />
 
               <Lock
+                data-testid="icon-password"
                 color="#E0E0E0"
                 size={24}
                 style={{ marginTop: 'auto', marginBottom: 'auto' }}
@@ -126,10 +134,8 @@ function Login() {
                 </div>
               )}
             </Error>
-            <Button>
-              <Link to="/home">
-                <Text>Continuar</Text>
-              </Link>
+            <Button data-testid="button-login">
+              <Text>Continuar</Text>
             </Button>
           </Form>
         </ContentContainer>

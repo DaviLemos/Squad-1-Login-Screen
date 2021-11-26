@@ -1,9 +1,27 @@
 // * React * //
 import React from 'react';
 // * Test * //
-import { render, screen, fireEvent } from '@testing-library/react';
+import {
+  render,
+  screen,
+  fireEvent,
+  userEvent,
+  waitFor,
+} from '@testing-library/react';
 // * Component * //
-import Login from '../Screens/login';
+import Login from '../Screens/Login';
+
+jest.mock('react-router-dom', () => {
+  // Require the original module to not be mocked...
+  const originalModule = jest.requireActual('react-router-dom');
+
+  return {
+    __esModule: true,
+    ...originalModule,
+    // add your noops here
+    useNavigate: jest.fn(() => 'bar'),
+  };
+});
 
 describe('Login Component:', () => {
   describe('Title Component:', () => {
@@ -90,6 +108,15 @@ describe('Login Component:', () => {
         height: '67px',
         cursor: 'pointer',
         border: 'none',
+      });
+    });
+
+    it('OnSubmit Click', () => {
+      test('Clicking the submit button after entering values', () => {
+        const handleSubmit = jest.fn();
+        const submitButtonNode = render(<Login />).getByTestId('button-login');
+        fireEvent.click(submitButtonNode);
+        expect(handleSubmit).toHaveBeenCalledTimes(1);
       });
     });
   });

@@ -1,4 +1,4 @@
-import getday from '../Components/helper/getday.helper';
+import getday from '../helper/getday.helper';
 
 // Testes da função auxiliar getday
 describe('getday function', () => {

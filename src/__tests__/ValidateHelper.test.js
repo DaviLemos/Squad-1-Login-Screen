@@ -1,5 +1,3 @@
-import React from 'react';
-import { render, screen, waitFor } from '@testing-library/react';
 import validate from '../helper/validate.helper';
 
 describe('ValidateHelper', () => {
