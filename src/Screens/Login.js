@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Button, Text } from '../Components/Buttons/ButtonContinue';
 import { Form } from '../Components/Forms/Forms';
 import {
@@ -24,9 +25,10 @@ import validate from '../helper/validate.helper';
 import isBoth from '../helper/isBoth.helper';
 //* APi * //
 import { userLogin } from '../api/api';
-import { Link } from 'react-router-dom';
+import ls from 'local-storage';
 
 function Login() {
+  const navigate = useNavigate();
   const [errorMessage, setMessage] = useState('');
   const [fieldUsuario, setFieldUsuario] = useState(false);
   const [fieldSenha, setFieldSenha] = useState(false);
@@ -44,12 +46,14 @@ function Login() {
 
   const handleLogin = (values) => {
     userLogin({ email: values.usuario, password: values.senha }).then(function (
-      data,
+      data
     ) {
       if (data.auth) {
         setFieldUsuario(false);
         setFieldSenha(false);
         setMessage('');
+        ls.set('token', data.token);
+        navigate('/home');
       } else {
         data.message.includes('usuário')
           ? setFieldUsuario(true)
@@ -127,9 +131,7 @@ function Login() {
               )}
             </Error>
             <Button>
-              <Link to="/home">
-                <Text>Continuar</Text>
-              </Link>
+              <Text>Continuar</Text>
             </Button>
           </Form>
         </ContentContainer>
