@@ -67,7 +67,7 @@ function Login() {
   };
 
   return (
-    <Container>
+    <Container data-testid="container-login">
       <Background>
         <ContentContainer>
           <Saudacao data-testid="solutation">Olá,</Saudacao>
