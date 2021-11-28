@@ -1,4 +1,5 @@
-import getmes from '../Components/helper/getmes.helper';
+import getmes from '../helper/getmes.helper';
+
 
 describe('getmes function', () => {
   it('1 to equal Janeiro', () => {

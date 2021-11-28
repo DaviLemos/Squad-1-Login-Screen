@@ -49,7 +49,7 @@ const ContadorLogout = ({ token }) => {
   }, [decodedToken, isExpired]);
 
   return (
-    <TimerContainer>
+    <TimerContainer data-testid="contador">
       <TimeLogout>{contador}</TimeLogout>
       <Seconds>Seconds</Seconds>
     </TimerContainer>

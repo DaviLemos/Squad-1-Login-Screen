@@ -5,20 +5,16 @@ export const WeatherBox = styled.div`
   margin-top: 15px;
 
   @media (max-width: ${widths.sm}) {
-    position: absolute; 
+    position: absolute;
     left: 280px;
-    margin-top: 20px
-  
-    
+    margin-top: 20px;
   }
-
 `;
 
 export const WeatherContent = styled.div`
   display: flex;
   flex-direction: column;
   width: 50%;
-
 `;
 
 export const WeatherTitle = styled.p`
@@ -44,16 +40,14 @@ export const WeatherData = styled.div`
   justify-content: center;
 
   @media (max-width: ${widths.sm}) {
-    margin-left: 20px
+    margin-left: 20px;
   }
-
 `;
 
 export const WeatherTemperature = styled.div`
   margin-top: 8px;
   margin-bottom: auto;
   margin-left: 10px;
-
 
   font-family: Mark Pro;
   font-size: 28px;

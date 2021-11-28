@@ -1,11 +1,42 @@
 // * React * //
 import React from 'react';
 // * Test * //
-import { render, screen, fireEvent } from '@testing-library/react';
+import {
+  render,
+  screen,
+  fireEvent,
+  userEvent,
+  waitFor,
+  act,
+} from '@testing-library/react';
+import user from '@testing-library/user-event';
 // * Component * //
 import Login from '../Screens/Login';
 
+jest.mock('react-router-dom', () => {
+  // Require the original module to not be mocked...
+  const originalModule = jest.requireActual('react-router-dom');
+
+  return {
+    __esModule: true,
+    ...originalModule,
+    // add your noops here
+    useNavigate: jest.fn(() => 'bar'),
+  };
+});
+
 describe('Login Component:', () => {
+  it('Should render correctly', () => {
+    const { container } = render(<Login />);
+    expect(container).toMatchSnapshot();
+  });
+  describe('Solutation Component:', () => {
+    it('Have Solutation', () => {
+      render(<Login />);
+      expect(screen.getByTestId('solutation')).toBeInTheDocument();
+    });
+  });
+
   describe('Title Component:', () => {
     it('Have Title Login', () => {
       render(<Login />);
@@ -54,17 +85,19 @@ describe('Login Component:', () => {
       });
     });
 
-    it('Updates onChange', () => {
+    it('Updates onChange', async () => {
+      const promise = Promise.resolve();
       const { getByTestId } = render(<Login />);
 
-      const user = getByTestId('input-user');
-      const password = getByTestId('input-password');
+      const userInput = getByTestId('input-user');
+      const passwordInput = getByTestId('input-password');
 
-      fireEvent.change(user, { target: { value: 'davi@furg.br' } });
-      fireEvent.change(password, { target: { value: '1@5aeD38' } });
+      user.type(userInput, 'davi@furg.br');
+      user.type(passwordInput, '1@5aeD38');
 
-      expect(user.value).toBe('davi@furg.br');
-      expect(password.value).toBe('1@5aeD38');
+      expect(userInput.value).toBe('davi@furg.br');
+      expect(passwordInput.value).toBe('1@5aeD38');
+      await act(() => promise);
     });
   });
 
@@ -94,3 +127,4 @@ describe('Login Component:', () => {
     });
   });
 });
+

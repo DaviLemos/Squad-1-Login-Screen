@@ -70,13 +70,13 @@ function Login() {
     <Container>
       <Background>
         <ContentContainer>
-          <Saudacao>Olá,</Saudacao>
+          <Saudacao data-testid="solutation">Olá,</Saudacao>
           <Frase>
             Para continuar navegando de forma segura, efetue o login na rede.
           </Frase>
 
           <Form onSubmit={formik.handleSubmit}>
-            <Titulo>Login</Titulo>
+            <Titulo data-testid="login">Login</Titulo>
             <DivContainerText
               error={
                 (formik.touched.usuario && formik.errors.usuario) ||
@@ -84,6 +84,7 @@ function Login() {
               }
             >
               <InputText
+                data-testid="input-user"
                 placeholder="Usuário"
                 id="usuario"
                 name="usuario"
@@ -94,6 +95,7 @@ function Login() {
               />
 
               <User
+                data-testid="icon-user"
                 color="#E0E0E0"
                 size={24}
                 style={{ marginTop: 'auto', marginBottom: 'auto' }}
@@ -105,6 +107,7 @@ function Login() {
               }
             >
               <InputPass
+                data-testid="input-password"
                 placeholder="Senha"
                 id="senha"
                 name="senha"
@@ -115,6 +118,7 @@ function Login() {
               />
 
               <Lock
+                data-testid="icon-password"
                 color="#E0E0E0"
                 size={24}
                 style={{ marginTop: 'auto', marginBottom: 'auto' }}
@@ -130,7 +134,7 @@ function Login() {
                 </div>
               )}
             </Error>
-            <Button>
+            <Button data-testid="button-login">
               <Text>Continuar</Text>
             </Button>
           </Form>
@@ -148,3 +152,4 @@ function Login() {
 }
 
 export default Login;
+

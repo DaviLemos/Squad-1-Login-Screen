@@ -64,7 +64,7 @@ function Home() {
         </DivCaixa>
       </SegundaDiv>
       <Footer>
-        <ButtonLogout onClick={() => logoutFunction()}>
+        <ButtonLogout data-testid="btnLogout" onClick={() => logoutFunction()}>
           <TextLogout>Logout</TextLogout>
         </ButtonLogout>
         <ButtonContNav>

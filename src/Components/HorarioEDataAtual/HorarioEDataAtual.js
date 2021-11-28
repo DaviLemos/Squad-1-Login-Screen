@@ -1,6 +1,6 @@
 import React from 'react';
-import getDayPT from '../helper/getday.helper';
-import getMesPT from '../helper/getmes.helper';
+import getDayPT from '../../helper/getday.helper';
+import getMesPT from '../../helper/getmes.helper';
 import { StyleParagraph } from './HorarioEDataAtual-style';
 
 const HorarioEDataAtual = () => {

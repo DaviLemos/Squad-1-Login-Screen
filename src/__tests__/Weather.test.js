@@ -59,7 +59,7 @@ describe('Weather Componet:', () => {
     getWeather.mockResolvedValue(mockWeather);
     render(<Weather />);
     await waitFor(() =>
-      expect(screen.getByTestId('weather-content')).toBeInTheDocument()
+      expect(screen.getByTestId('weather-content')).toBeInTheDocument(),
     );
   });
 
@@ -74,7 +74,7 @@ describe('Weather Componet:', () => {
       getWeather.mockResolvedValue(mockWeather);
       render(<Weather />);
       await waitFor(() =>
-        expect(screen.getByTestId('location')).toBeInTheDocument()
+        expect(screen.getByTestId('location')).toBeInTheDocument(),
       );
     });
 
@@ -82,7 +82,7 @@ describe('Weather Componet:', () => {
       getWeather.mockResolvedValue(mockWeather);
       render(<Weather />);
       await waitFor(() =>
-        expect(screen.getByText('Porto Alegre - RS')).toBeInTheDocument()
+        expect(screen.getByText('Porto Alegre - RS')).toBeInTheDocument(),
       );
     });
 
@@ -96,9 +96,9 @@ describe('Weather Componet:', () => {
           fontFamily: 'Mark Pro',
           fontStyle: 'normal',
           fontWeight: 'normal',
-          fontSize: '14px',
-          lineHeight: '18px',
-        })
+          fontSize: '12px',
+          lineHeight: '10px',
+        }),
       );
     });
   });
@@ -108,7 +108,7 @@ describe('Weather Componet:', () => {
       getWeather.mockResolvedValue(mockWeather);
       render(<Weather />);
       await waitFor(() =>
-        expect(screen.getByTestId('temperature')).toBeInTheDocument()
+        expect(screen.getByTestId('temperature')).toBeInTheDocument(),
       );
     });
 
@@ -126,11 +126,11 @@ describe('Weather Componet:', () => {
       await waitFor(() =>
         expect(screen.getByTestId('temperature')).toHaveStyle({
           fontFamily: 'Mark Pro',
-          fontSize: '48px',
+          fontSize: '28px',
           fontStyle: 'normal',
           fontWeight: 'bold',
           color: '#222222',
-        })
+        }),
       );
     });
   });
