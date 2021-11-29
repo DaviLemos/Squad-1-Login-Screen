@@ -42,7 +42,4 @@ O aplicativo contém duas telas. Assim, na primeira interface, o usuário deve i
 
 #### Desenvolvedores
 
-- Davi
-- Guilherme Paiva
-- Rodrigo Rodrigues
-- Tamires Rodrigues
+- Davi Lemos - Guilherme Paiva - Rodrigo Rodrigues - Tamires Rodrigues
