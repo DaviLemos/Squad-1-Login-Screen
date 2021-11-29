@@ -15,6 +15,10 @@ O aplicativo contém duas telas. Assim, na primeira interface, o usuário deve i
 
 ### Tutorial em vídeo em breve ... 
 
+### Versão Web
+
+### Versão Mobile
+
 ### Tecnologias utilizadas 
 
 - React
