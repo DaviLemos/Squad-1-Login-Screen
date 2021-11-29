@@ -67,7 +67,7 @@ function Login() {
   };
 
   return (
-    <Container>
+    <Container data-testid="container-login">
       <Background>
         <ContentContainer>
           <Saudacao data-testid="solutation">Olá,</Saudacao>
@@ -145,6 +145,7 @@ function Login() {
           src={LogoCompassoBranco}
           className="img_Logo"
           alt="Logo Compasso Branco"
+          data-testid="logo"
         />
       </Imagem>
     </Container>
@@ -152,4 +153,3 @@ function Login() {
 }
 
 export default Login;
-
