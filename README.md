@@ -1,29 +1,9 @@
 # Squad-1-Login-Screen
 
-## Descrição do Projeto
+## Descrição geral da aplicação
 
-O aplicativo contém duas telas. Assim, na primeira tela, o usuário deve inserir seu e-mail e senha para fazer o login. Nesse contexto, o e-mail e a senha devem passar por validações. Na segunda página, o usuário tem acesso ao horário e temperatura da cidade de Porto Alegre RS e possui um tempo de navegação de 300 segundos. 
+O aplicativo contém duas telas. Assim, na primeira interface, o usuário deve inserir seu e-mail e senha para fazer o login. Nesse contexto, o e-mail e a senha devem passar por validações. Na segunda página, o usuário tem acesso ao horário e temperatura da cidade de Porto Alegre RS e possui um tempo de navegação de 300 segundos.
 
-## Versão Web
+### Como rodar essa aplicação?
 
-## Versão Mobile
-
-## Tecnologias Usadas
-
-- React
-- React Router V6
-- Formik
-- React testing libray
-- Mysql
-- Node.js
-- JWT
-- styled-components
-- HTML&CSS
-- Javascript.
-
-## Testes
-
-- Teste unitários
-- Teste end to end
-
-## Comandos
+1. Clone ou baixe este repositório em sua máquina.
