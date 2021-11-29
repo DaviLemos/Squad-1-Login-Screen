@@ -9,8 +9,12 @@ O aplicativo contém duas telas. Assim, na primeira tela, o usuário deve inseri
 - Código fonte
 - Metodologia Kanban
 
-## Web
+## Versão Web
 
-## Mobidel
+## Versão Mobile
 
-npm test -- --coverage
+## Tecnologias Usadas
+
+## Testes
+
+## Comandos
