@@ -1,5 +1,51 @@
-# Squad-1-Login-Screen
+# *Squad-1-Login-Screen*
 
-## Para rodar os testes basta executar o comando:
+## Descrição geral da aplicação
 
-npm test -- --coverage
+O aplicativo contém duas telas. Assim, na primeira interface, o usuário deve inserir seu e-mail e senha para fazer o login. Nesse contexto, o e-mail e a senha devem passar por validações. Na segunda página, o usuário tem acesso ao horário e temperatura da cidade de Porto Alegre RS e possui um tempo de navegação de 300 segundos.
+
+## *Features*
+
+- Tela de login com validação de e-mail e senha.
+- Tela inicial com informações sobre a temperatura da cidade de Porto Alegre, hora e data.
+- Tempo de navegação na página inicial de 300 segundos.
+- Integração front-end e back-end. Nesse contexto, foi utilizado o *Mysql*.
+
+### Como rodar essa aplicação?
+
+1. Clone ou baixe este repositório em sua máquina.
+2. Abra seu terminal e execute o comando **npm install** no diretório do projeto. Desta forma, o comando instalará todas as dependências necessárias para rodar o projeto em sua máquina.
+3. Antes de continuar, certifique-se de ter o **Mysql** e o **Mysql workbench** instalado em sua máquina. Se você usa uma distribuição Linux, aqui está uma sugestão amigável que resolveu algumas das dores de cabeça da equipe: https://www.youtube.com/watch?v=wKd-B6sz_rg 
+4. Abra o diretório chamado backend na pasta do projeto e execute o comando **npm start**, ele criará automaticamente uma tabela de usuários. Dessa forma, você pode usar a rota **/registry** para cadastrar um usuário.
+5. Agora você está pronto para usar o aplicativo! Vá para o diretório deste projeto onde você baixou e execute o comando **npm start**.
+6. Você verá a tela de login assim que seu navegador abrir na rota do **localhost:3000**, basta inserir seu e-mail e senha e clicar no botão continuar. 
+
+### Tutorial em vídeo em breve ... 
+
+### Versões da aplicação
+
+- Desktop
+- Mobile
+
+## Testes realizados
+
+- Unitários
+- *End-To-end*
+
+### Tecnologias utilizadas 
+
+- *React*
+- *React Router V6*
+- *Formik*
+- *React testing library*
+- *Cypress*
+- *Javascript*
+- *Node.js*
+- *JWT*
+- *Mysql*
+- *styled-components*
+- *HTML e CSS*
+
+#### Desenvolvedores
+
+- Davi Lemos - Guilherme Paiva - Rodrigo Rodrigues - Tamires Rodrigues
