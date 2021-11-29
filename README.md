@@ -1,10 +1,19 @@
 # Squad-1-Login-Screen
 
-> Project Status: Completed :heavy_check_mark:
+> Situaçaõ do projeto: Completed :heavy_check_mark:
 
-## Project Description
+## Descrição do Projeto
 
-The app contains two screens. Thus, on the first screen, the user must enter their email and password to login. Thus, the email and password must undergo validations. On the second page, the user has access to the time and temperature of the city of Porto Alegre RS and has a navigation time of 300 seconds.
-## Para rodar os testes basta executar o comando:
+O aplicativo contém duas telas. Assim, na primeira tela, o usuário deve inserir seu e-mail e senha para fazer o login. Nesse contexto, o e-mail e a senha devem passar por validações. Na segunda página, o usuário tem acesso ao horário e temperatura da cidade de Porto Alegre RS e possui um tempo de navegação de 300 segundos. 
+
+## Artefatos deste projeto 
+
+- Código fonte
+- Metodologia Kanban
+
+
+## Web
+
+## Mobidel
 
 npm test -- --coverage
