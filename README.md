@@ -40,3 +40,9 @@ O aplicativo contém duas telas. Assim, na primeira interface, o usuário deve i
 - *styled-components*
 - *HTML e CSS*
 
+#### Desenvolvedores
+
+- Davi
+- Guilherme Paiva
+- Rodrigo Rodrigues
+- Tamires Rodrigues
