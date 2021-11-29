@@ -15,6 +15,8 @@ O aplicativo contém duas telas. Assim, na primeira tela, o usuário deve inseri
 
 ## Tecnologias Usadas
 
+- React, React Router V6, Formik, React testing libray, Mysql, Node.js, JWT, styled-components, HTML&CSS, Javascript.
+
 ## Testes
 
 ## Comandos
