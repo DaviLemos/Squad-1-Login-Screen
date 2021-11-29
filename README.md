@@ -30,7 +30,7 @@ O aplicativo contém duas telas. Assim, na primeira interface, o usuário deve i
 ## Testes realizados
 
 - Unitários
-- End-to-end
+- *End-To-end*
 
 ### Tecnologias utilizadas 
 
