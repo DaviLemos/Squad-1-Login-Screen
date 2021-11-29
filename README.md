@@ -7,3 +7,5 @@ O aplicativo contém duas telas. Assim, na primeira interface, o usuário deve i
 ### Como rodar essa aplicação?
 
 1. Clone ou baixe este repositório em sua máquina.
+2. Abra seu terminal e execute o comando npm install no diretório do projeto. Desta forma, o comando instalará todas as dependências necessárias para rodar o projeto em sua máquina.
+ 
