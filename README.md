@@ -22,9 +22,15 @@ O aplicativo contém duas telas. Assim, na primeira interface, o usuário deve i
 
 ### Tutorial em vídeo em breve ... 
 
-### Versão Web
+### Versões da aplicação
 
-### Versão Mobile
+- Desktop
+- Mobile
+
+## Testes realizados
+
+- Unitários
+- End-to-end
 
 ### Tecnologias utilizadas 
 
