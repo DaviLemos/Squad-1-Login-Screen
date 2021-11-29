@@ -145,6 +145,7 @@ function Login() {
           src={LogoCompassoBranco}
           className="img_Logo"
           alt="Logo Compasso Branco"
+          data-testid="logo"
         />
       </Imagem>
     </Container>

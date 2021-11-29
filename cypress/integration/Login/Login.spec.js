@@ -16,8 +16,9 @@ describe('Component Login', () => {
     cy.visit('/');
 
     cy.get('[data-testid=input-user]').type('davi@furg.com');
-
     cy.get('[data-testid=input-password]').type('!Davi12');
+
+    cy.contains('Ops, senha inválida.');
   });
 
   it('Should Login User and go to Screen Home', () => {
@@ -28,4 +29,47 @@ describe('Component Login', () => {
 
     cy.get('[data-testid=button-login]').click();
   });
+
+  it ('Should add user and show error "email inválido"', () => {
+    cy.visit('/');
+
+    cy.get('[data-testid=input-user]').type('davifurg.com');
+    cy.get('[data-testid=input-password]').type('!Davi123');
+
+    cy.contains('Ops, usuário inválido.');
+  });
+
+  it ('Should add user and show error "usuário e senha inválidos"', () => {
+    cy.visit('/');
+
+    cy.get('[data-testid=input-user]').type('davifurg.com');
+    cy.get('[data-testid=input-password]').type('!Davi13');
+
+    cy.contains('Ops, usuário e senha invalidos.');
+  });
+
+  it ('Should have Saudacao "Olá,"', () => {
+    cy.visit('/');
+
+    cy.contains('Olá,');
+  });
+
+  it ('Should have Saudacao "Para continuar navegando de forma segura, efetue o login na rede."', () => {
+    cy.visit('/');
+
+    cy.contains('Para continuar navegando de forma segura, efetue o login na rede.');
+  });
+
+  it ('Should have Login User and passaword filled in', () => {
+    cy.visit('/');
+
+    cy.get('[data-testid=button-login]').click();
+  });
+
+  /*it ('Should have logo', () => {
+    cy.visit('/');
+
+    /instalei uma biblioteca addMatchImageSnapchat 
+    (senao me engano) porem nao consegui utilizar.
+  });*/
 });

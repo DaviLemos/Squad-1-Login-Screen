@@ -5,7 +5,7 @@ const validate = (values) => {
   } else if (
     !/^(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*])(?=.{8,})/.test(values.senha)
   ) {
-    errors.senha = 'Ops, senha inválido';
+    errors.senha = 'Ops, senha inválida';
   }
 
   if (!values.usuario) {
