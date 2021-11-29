@@ -4,6 +4,13 @@
 
 O aplicativo contém duas telas. Assim, na primeira interface, o usuário deve inserir seu e-mail e senha para fazer o login. Nesse contexto, o e-mail e a senha devem passar por validações. Na segunda página, o usuário tem acesso ao horário e temperatura da cidade de Porto Alegre RS e possui um tempo de navegação de 300 segundos.
 
+## *Features*
+
+- Tela de login com validação de e-mail e senha.
+- Tela inicial com informações sobre a temperatura da cidade de Porto Alegre, hora e data.
+- Tempo de navegação na página inicial de 300 segundos.
+- Integração front-end e back-end. Nesse contexto, foi utilizado o Mysql.
+
 ### Como rodar essa aplicação?
 
 1. Clone ou baixe este repositório em sua máquina.
