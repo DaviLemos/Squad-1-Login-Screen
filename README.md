@@ -1,4 +1,4 @@
-# Squad-1-Login-Screen
+# *Squad-1-Login-Screen*
 
 ## Descrição geral da aplicação
 
@@ -9,7 +9,7 @@ O aplicativo contém duas telas. Assim, na primeira interface, o usuário deve i
 - Tela de login com validação de e-mail e senha.
 - Tela inicial com informações sobre a temperatura da cidade de Porto Alegre, hora e data.
 - Tempo de navegação na página inicial de 300 segundos.
-- Integração front-end e back-end. Nesse contexto, foi utilizado o Mysql.
+- Integração front-end e back-end. Nesse contexto, foi utilizado o *Mysql*.
 
 ### Como rodar essa aplicação?
 
@@ -28,15 +28,15 @@ O aplicativo contém duas telas. Assim, na primeira interface, o usuário deve i
 
 ### Tecnologias utilizadas 
 
-- React
-- React Router V6
-- Formik
-- React testing library
-- Cypress
-- Javascript
-- Node.js
-- JWT
-- Mysql
-- styled-components
-- HTML e CSS
+- *React*
+- *React Router V6*
+- *Formik*
+- *React testing library*
+- *Cypress*
+- *Javascript*
+- *Node.js*
+- *JWT*
+- *Mysql*
+- *styled-components*
+- *HTML e CSS*
 
