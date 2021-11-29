@@ -13,5 +13,19 @@ O aplicativo contém duas telas. Assim, na primeira interface, o usuário deve i
 5. Agora você está pronto para usar o aplicativo! Vá para o diretório deste projeto onde você baixou e execute o comando **npm start**.
 6. Você verá a tela de login assim que seu navegador abrir na rota do **localhost:3000**, basta inserir seu e-mail e senha e clicar no botão continuar. 
 
+### Tutorial em vídeo em breve ... 
 
+### Tecnologias utilizadas 
+
+- React
+- React Router V6
+- Formik
+- React testing library
+- Cypress
+- Javascript
+- Node.js
+- JWT
+- Mysql
+- styled-components
+- HTML e CSS
 
